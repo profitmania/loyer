@@ -60,7 +60,7 @@
         </nav>
 
         <div class="pt-4 border-t border-slate-800 text-xs text-slate-500 space-y-1">
-            <p><span data-i18n="status_label">Статус</span>: <span class="text-emerald-400 font-semibold" data-i18n="status_val">Активний захист</span></p>
+            <p><span data-i18n="status_label">Статус</span>: <span class="text-emerald-400 font-semibold">Лист надіслано (Очікування відповіді)</span></p>
             <p><span data-i18n="jurisdiction_label">Юрисдикція</span>: Київ, Україна</p>
         </div>
     </aside>
@@ -73,65 +73,65 @@
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-slate-800 p-6 rounded-xl border border-slate-700 gap-4">
                 <div>
                     <h2 class="text-2xl font-bold text-white mb-1"><span data-i18n="dash_case_title">Справа</span>: ТОВ "БІЗНЕС ПОЗИКА"</h2>
-                    <p class="text-sm text-slate-400" data-i18n="dash_case_subtitle">Договір № 478061-КС-002 • Категорія: Шахрайський кредит (Фейк)</p>
+                    <p class="text-sm text-slate-400">Договір № 478061-КС-002 • Відповідь надіслано на office@bizpozyka.com</p>
                 </div>
-                <span class="px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold rounded-full" data-i18n="dash_badge">
-                    Досудове врегулювання / Виконавче провадження
+                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold rounded-full">
+                    Лист-заперечення відправлено кредитору
                 </span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-xs text-slate-400 mb-1" data-i18n="creditor_label">Позивач / Стягувач</div>
+                    <div class="text-xs text-slate-400 mb-1">Позивач / Стягувач</div>
                     <div class="text-lg font-semibold text-white">ТОВ "БІЗНЕС ПОЗИКА"</div>
                     <div class="text-xs text-slate-400 mt-2">ЄДРПОУ: 41084239 | office@bizpozyka.com</div>
                 </div>
 
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-xs text-slate-400 mb-1" data-i18n="debtor_label">Відповідач / Боржник</div>
+                    <div class="text-xs text-slate-400 mb-1">Відповідач / Боржник</div>
                     <div class="text-lg font-semibold text-white">Бабак Геннадій Миколайович</div>
                     <div class="text-xs text-slate-400 mt-2">ІПН: 2615907039</div>
                 </div>
 
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-xs text-slate-400 mb-1" data-i18n="msg_count_label">Зафіксовано повідомлень</div>
-                    <div class="text-3xl font-bold text-blue-400" id="dash-msg-count">1</div>
-                    <div class="text-xs text-slate-400 mt-1">Останнє: 0800211503</div>
+                    <div class="text-xs text-slate-400 mb-1">Статус комунікації</div>
+                    <div class="text-xl font-bold text-emerald-400 mt-1">Заперечення відправлено</div>
+                    <div class="text-xs text-slate-400 mt-1">Готуємо заяву в поліцію</div>
                 </div>
             </div>
 
             <!-- Action Strategy Plan -->
             <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                 <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-list-check text-blue-400"></i> <span data-i18n="plan_title">План дій юридичного захисту</span>
+                    <i class="fa-solid fa-list-check text-blue-400"></i> План дій юридичного захисту
                 </h3>
                 <div class="space-y-4">
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" checked disabled class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-emerald-400" data-i18n="step_1_title">Крок 1: Фіксація фактів шахрайства та підготовка відповіді</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_1_desc">Лист-вимога зафіксовано, сформовано офіційну відповідь про відсутність кредиту та недоступність кабінету.</p>
+                            <div class="font-semibold text-sm text-emerald-400">Крок 1: Відправка заперечення кредитору (ВИКОНАНО)</div>
+                            <p class="text-xs text-slate-400">Лист надіслано на office@bizpozyka.com з темою про фейковий кредит.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step2" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_2_title">Крок 2: Відправка відповіді на office@bizpozyka.com</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_2_desc">Надіслати підготовлене заперечення на офіційну електронну пошту кредитора.</p>
+                            <div class="font-semibold text-sm text-slate-200">Крок 2: Подача заяви про злочин до Оболонського УП</div>
+                            <p class="text-xs text-slate-400">Подати заяву за ст. 190 КК України до поліції (вул. Героїв полку «Азов», 2А).</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step3" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_3_title">Крок 3: Подача заяви про злочин (Оболонське управління поліції)</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_3_desc">Подати заяву за ст. 190 КК України до Оболонського УП ГУНП у м. Києві.</p>
+                            <div class="font-semibold text-sm text-slate-200">Крок 3: Скарга до Національного банку України (НБУ)</div>
+                            <p class="text-xs text-slate-400">Звернення щодо перевірки законності дій ТОВ "БІЗНЕС ПОЗИКА".</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step4" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_4_title">Крок 4: Звернення до НБУ та Держспоживслужби</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_4_desc">Скарга на неправомірні дії фінансової установи та незаконне стягнення.</p>
+                            <div class="font-semibold text-sm text-slate-200">Крок 4: Моніторинг Оболонського суду та Реєстру боржників</div>
+                            <p class="text-xs text-slate-400">Контроль можливих судових наказів через Оболонський райсуд м. Києва.</p>
                         </div>
                     </div>
                 </div>
@@ -140,36 +140,36 @@
 
         <!-- TAB: PROFILE / DATA -->
         <section id="tab-profile" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="profile_heading">Вхідні дані справи та державні органи</h2>
+            <h2 class="text-2xl font-bold text-white mb-4">Вхідні дані справи та державні органи</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- User Data -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
-                    <h3 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2" data-i18n="user_data_title">Мої персональні дані</h3>
+                    <h3 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2">Мої персональні дані</h3>
                     <div>
-                        <label class="text-xs text-slate-400" data-i18n="label_name">ПІБ</label>
+                        <label class="text-xs text-slate-400">ПІБ</label>
                         <input type="text" id="user-name" value="Бабак Геннадій Миколайович" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-sm text-white">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400" data-i18n="label_inn">ІПН (Податковий номер)</label>
+                        <label class="text-xs text-slate-400">ІПН (Податковий номер)</label>
                         <input type="text" id="user-inn" value="2615907039" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-sm text-white">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400" data-i18n="label_address">Адреса проживання/реєстрації</label>
+                        <label class="text-xs text-slate-400">Адреса проживання/реєстрації</label>
                         <input type="text" id="user-address" value="м. Київ, вул. Автозаводська, буд. 41, кв. 69" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-sm text-white">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400" data-i18n="label_phone">Телефон</label>
+                        <label class="text-xs text-slate-400">Телефон</label>
                         <input type="text" id="user-phone" value="+380971695556" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-sm text-white">
                     </div>
-                    <button onclick="saveUserData()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded" data-i18n="btn_save">Зберегти зміни</button>
+                    <button onclick="saveUserData()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded">Зберегти зміни</button>
                 </div>
 
                 <!-- Creditor & Authorities Data -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
-                    <h3 class="text-lg font-bold text-red-400 border-b border-slate-700 pb-2" data-i18n="creditor_data_title">Дані організації та держорганів м. Київ</h3>
+                    <h3 class="text-lg font-bold text-red-400 border-b border-slate-700 pb-2">Дані організації та держорганів м. Київ</h3>
                     <div>
-                        <label class="text-xs text-slate-400">Кредитор / Email для відповідей</label>
+                        <label class="text-xs text-slate-400">Кредитор / Email</label>
                         <input type="text" value="ТОВ 'БІЗНЕС ПОЗИКА' | office@bizpozyka.com" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                     <div>
@@ -190,16 +190,16 @@
 
         <!-- TAB: MESSAGES / HISTORY -->
         <section id="tab-history" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="history_heading">Реєстр листування та відповідей</h2>
+            <h2 class="text-2xl font-bold text-white mb-4">Реєстр листування та відповідей</h2>
 
             <!-- Input Box -->
             <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
-                <h3 class="text-md font-semibold text-white" data-i18n="history_add_title">Додати нове повідомлення / лист від кредитора</h3>
+                <h3 class="text-md font-semibold text-white">Додати нове повідомлення / лист від кредитора</h3>
                 <textarea id="new-message-text" rows="4" placeholder="Вставте сюди скопійований текст SMS, електронного чи паперового листа..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                     <input type="text" id="new-message-sender" placeholder="Від кого (напр. ТОВ Бізнес Позика)" class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white w-full md:w-64">
                     <button onclick="addMessage()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2 rounded-lg font-medium flex items-center gap-2 w-full md:w-auto justify-center">
-                        <i class="fa-solid fa-plus"></i> <span data-i18n="btn_add_history">Зберегти в історію</span>
+                        <i class="fa-solid fa-plus"></i> Зберегти в історію
                     </button>
                 </div>
             </div>
@@ -212,16 +212,16 @@
 
         <!-- TAB: DOCUMENT GENERATOR -->
         <section id="tab-generator" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="generator_heading">Генератор офіційних документів</h2>
+            <h2 class="text-2xl font-bold text-white mb-4">Генератор офіційних документів</h2>
             
             <div class="flex flex-wrap gap-3 border-b border-slate-800 pb-4">
-                <button onclick="generateDoc('police')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-i18n="doc_btn_police">
+                <button onclick="generateDoc('police')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium">
                     Заява до Поліції (Оболонське УП)
                 </button>
-                <button onclick="generateDoc('nbu')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-i18n="doc_btn_nbu">
+                <button onclick="generateDoc('nbu')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium">
                     Скарга до НБУ
                 </button>
-                <button onclick="generateDoc('creditor')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-i18n="doc_btn_creditor">
+                <button onclick="generateDoc('creditor')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium">
                     Відповідь кредитору (Email)
                 </button>
             </div>
@@ -230,7 +230,7 @@
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-md font-bold text-blue-400" id="doc-title">Офіційна відповідь кредитору</h3>
                     <button onclick="copyDocText()" class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-3 py-1.5 rounded flex items-center gap-1.5">
-                        <i class="fa-regular fa-copy"></i> <span data-i18n="btn_copy">Скопіювати текст</span>
+                        <i class="fa-regular fa-copy"></i> Скопіювати текст
                     </button>
                 </div>
                 <pre id="doc-content" class="bg-slate-950 p-4 rounded-lg text-slate-300 font-mono text-xs leading-relaxed max-h-[500px] overflow-y-auto border border-slate-800"></pre>
@@ -239,24 +239,24 @@
 
         <!-- TAB: CONSULTANT / ADVICE -->
         <section id="tab-consultant" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="consultant_heading">Консультації Адвоката та Юридичний Порадник</h2>
+            <h2 class="text-2xl font-bold text-white mb-4">Консультації Адвоката та Юридичний Порадник</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-3">
                     <div class="text-blue-400 font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-envelope"></i> Куди відправляти відповідь на письмові вимоги?
+                        <i class="fa-solid fa-circle-check"></i> Лист успішно надіслано! Що далі?
                     </div>
                     <p class="text-sm text-slate-300 leading-relaxed">
-                        Офіційний email для листування з ТОВ "БІЗНЕС ПОЗИКА": <b>office@bizpozyka.com</b>. Також ви можете перевіряти наявність кабінету на їхньому сайті: <b>https://my.bizpozyka.com</b>, хоча туди зайти неможливо через фейковість кредиту.
+                        Ви відправили заперечення на <b>office@bizpozyka.com</b> із темою: <br><i>«Заперечення щодо фейкового кредиту та вимога скасування заборгованості — Договір № 478061-КС-002 (Бабак Г.М.)»</i>. Тепер переходимо до подачі заяви про кримінальне правопорушення в Оболонське управління поліції.
                     </p>
                 </div>
 
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-3">
                     <div class="text-emerald-400 font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-shield-halved"></i> Ваша позиція захисту
+                        <i class="fa-solid fa-shield-halved"></i> Доказова база зафіксована
                     </div>
                     <p class="text-sm text-slate-300 leading-relaxed">
-                        Ви чітко заявляєте: кредиту не брали, договір не підписували, кошти на рахунки чи картки не отримували, в особистий кабінет увійти не можете. Це класичні ознаки шахрайства з використанням персональних даних.
+                        Уся переписка та копії відправлених заперечень зберігаються в історії додатку для пред'явлення правоохоронним органам та НБУ.
                     </p>
                 </div>
             </div>
@@ -276,42 +276,7 @@
                 menu_profile: "Вхідні дані та Сторони",
                 menu_history: "Реєстр листування",
                 menu_generator: "Генератор документів",
-                menu_consultant: "Поради юриста",
-                status_label: "Статус",
-                status_val: "Активний захист",
-                jurisdiction_label: "Юрисдикція",
-                dash_case_title: "Справа",
-                dash_case_subtitle: "Договір № 478061-КС-002 • Категорія: Шахрайський кредит (Фейк)",
-                dash_badge: "Досудове врегулювання / Виконавче провадження",
-                creditor_label: "Позивач / Стягувач",
-                debtor_label: "Відповідач / Боржник",
-                msg_count_label: "Зафіксовано повідомлень",
-                plan_title: "План дій юридичного захисту",
-                step_1_title: "Крок 1: Фіксація фактів та підготовка відповіді",
-                step_1_desc: "Лист-вимога зафіксовано, сформовано офіційну відповідь про відсутність кредиту.",
-                step_2_title: "Крок 2: Відправка відповіді на office@bizpozyka.com",
-                step_2_desc: "Надіслати підготовлене заперечення на офіційну електронну пошту кредитора.",
-                step_3_title: "Крок 3: Подача заяви про злочин (Оболонське УП)",
-                step_3_desc: "Подати заяву за ст. 190 КК України до Оболонського управління поліції м. Києва.",
-                step_4_title: "Крок 4: Звернення до НБУ",
-                step_4_desc: "Скарга регулятору на порушення фінансової організації.",
-                profile_heading: "Вхідні дані справи та державні органи",
-                user_data_title: "Мої персональні дані",
-                label_name: "ПІБ",
-                label_inn: "ІПН (Податковий номер)",
-                label_address: "Адреса проживання/реєстрації",
-                label_phone: "Телефон",
-                btn_save: "Зберегти зміни",
-                creditor_data_title: "Дані організації та держорганів м. Київ",
-                history_heading: "Реєстр листування та відповідей",
-                history_add_title: "Додати нове повідомлення / лист від кредитора",
-                btn_add_history: "Зберегти в історію",
-                generator_heading: "Генератор офіційних документів",
-                doc_btn_police: "Заява до Поліції (Оболонське УП)",
-                doc_btn_nbu: "Скарга до НБУ",
-                doc_btn_creditor: "Відповідь кредитору (Email)",
-                btn_copy: "Скопіювати текст",
-                consultant_heading: "Консультації Адвоката та Юридичний Порадник"
+                menu_consultant: "Поради юриста"
             },
             ru: {
                 nav_title: "АДВОКАТ",
@@ -320,42 +285,7 @@
                 menu_profile: "Входные данные и Стороны",
                 menu_history: "Реестр переписки",
                 menu_generator: "Генератор документов",
-                menu_consultant: "Советы юриста",
-                status_label: "Статус",
-                status_val: "Активная защита",
-                jurisdiction_label: "Юрисдикция",
-                dash_case_title: "Дело",
-                dash_case_subtitle: "Договор № 478061-КС-002 • Категория: Мошеннический кредит (Фейк)",
-                dash_badge: "Досудебное урегулирование / Исполнительное производство",
-                creditor_label: "Истец / Взыскатель",
-                debtor_label: "Ответчик / Должник",
-                msg_count_label: "Зафиксировано сообщений",
-                plan_title: "План действий юридической защиты",
-                step_1_title: "Шаг 1: Фиксация фактов и подготовка ответа",
-                step_1_desc: "Письмо-требование зафиксировано, сформирован официальный ответ.",
-                step_2_title: "Шаг 2: Отправка ответа на office@bizpozyka.com",
-                step_2_desc: "Отправить подготовленное возражение на официальный email кредитора.",
-                step_3_title: "Шаг 3: Подача заявления о преступлении (Оболонское УП)",
-                step_3_desc: "Подать заявление по ст. 190 УК Украины в Оболонское управление полиции г. Киева.",
-                step_4_title: "Шаг 4: Обращение в НБУ",
-                step_4_desc: "Жалоба регулятору на нарушения финансовой организации.",
-                profile_heading: "Входные данные дела и госорганы",
-                user_data_title: "Мои персональные данные",
-                label_name: "ФИО",
-                label_inn: "ИНН (Налоговый номер)",
-                label_address: "Адрес проживания/регистрации",
-                label_phone: "Телефон",
-                btn_save: "Сохранить изменения",
-                creditor_data_title: "Данные организации и госорганов г. Киев",
-                history_heading: "Реестр переписки и ответов",
-                history_add_title: "Добавить новое сообщение / письмо от кредитора",
-                btn_add_history: "Сохранить в историю",
-                generator_heading: "Генератор официальных документов",
-                doc_btn_police: "Заявление в Полицию (Оболонское УП)",
-                doc_btn_nbu: "Жалоба в НБУ",
-                doc_btn_creditor: "Ответ кредитору (Email)",
-                btn_copy: "Скопировать текст",
-                consultant_heading: "Консультации Адвоката и Юридический Советник"
+                menu_consultant: "Советы юриста"
             }
         };
 
@@ -372,8 +302,9 @@
                     date: "11.11.2026",
                     sender: "ТОВ 'БІЗНЕС ПОЗИКА' (office@bizpozyka.com)",
                     text: `Шановний(на) Бабак Геннадій Миколайович!Повідомляємо, що по Вам Відкрито виконавче провадження про стягнення заборгованості.Для врегулювання боргу в добровільному порядку пропонуємо терміново зв’язатися з нами або перевірити наявні унікальні пропозиції в особистому кабінеті.http://cutt.ly/c2K7a3e0733423523 0800211503 office@bizpozyka.comВрегулювавши борг в досудовому порядку Ви зможете уникнути таких негативних наслідків, як: постійні листи від Приватного виконавця за адресою реєстрації, внесення Вас до реєстру боржників та блокування Ваших особистих рахунків, арешту рухомого та нерухомого майна. Дані наслідки застосовуються в процесі юридичного стягнення боргу.Термін дії пропозиції - ОБМЕЖЕНИЙ в часі !\nОтримувач: ТОВ "БІЗНЕС ПОЗИКА", Код ЄДРПОУ 41084239, Рахунок: Приват Банк UA20 305299 00000 26508046200938, МФО 305299. Призначення платежу: Погашення заборгованості ПІБ Бабак Геннадій Миколайович, ІПН 2615907039, Договір № 478061-КС-002`,
-                    reply: `ОФІЦІЙНА ВІДПОВІДЬ АДВОКАТА НА ЦЕЙ ПИСЬМОВИЙ ЗАПИТ:
+                    reply: `СТАТУС: ВІДПОВІДЬ УСПІШНО ВІДПРАВЛЕНО КРЕДИТОРУ
 Кому: ТОВ "БІЗНЕС ПОЗИКА" (office@bizpozyka.com)
+Тема (Subject): Заперечення щодо фейкового кредиту та вимога скасування заборгованості — Договір № 478061-КС-002 (Бабак Г.М.)
 Від: Бабак Геннадій Миколайович (ІПН: 2615907039)
 
 ЗАПЕРЕЧЕННЯ НА ВИМОГУ ТА ПОВІДОМЛЕННЯ ПРО ФЕЙКОВИЙ КРЕДИТ
@@ -386,7 +317,7 @@
 Вважаю наявність цього запису наслідком шахрайських дій третіх осіб з незаконним використанням моїх персональних даних. 
 ВИМАГАЮ негайно припинити будь-які вимоги, скасувати незаконну заборгованість та надати повний пакет документів по договору для передачі до Оболонського управління поліції м. Києва за ст. 190 КК України.
 
-Дата: 11.11.2026
+Дата відправки: 12.11.2026
 Підпис: Бабак Геннадій Миколайович`
                 }
             ]
@@ -408,7 +339,6 @@
 
         function saveData() {
             localStorage.setItem('loyer_app_data', JSON.stringify(appData));
-            document.getElementById('dash-msg-count').innerText = appData.messages.length;
         }
 
         function switchTab(tabId) {
@@ -461,14 +391,14 @@
                         <span>${msg.date}</span>
                     </div>
                     <div>
-                        <div class="text-xs text-slate-400 mb-1 font-semibold">Вхідне повідомлення:</div>
+                        <div class="text-xs text-slate-400 mb-1 font-semibold">Вхідне повідомлення від кредитора:</div>
                         <p class="text-sm text-slate-200 leading-relaxed font-mono whitespace-pre-wrap bg-slate-900/50 p-3 rounded border border-slate-700/50">${msg.text}</p>
                     </div>
                     ${msg.reply ? `
                     <div class="mt-4 pt-3 border-t border-slate-700">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-bold text-emerald-400"><i class="fa-solid fa-reply"></i> Відповідь на цей лист (надіслати на office@bizpozyka.com):</span>
-                            <button onclick="copyReplyText('${encodeURIComponent(msg.reply)}')" class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-2.5 py-1 rounded">Скопіювати відповідь</button>
+                            <span class="text-xs font-bold text-emerald-400"><i class="fa-solid fa-paper-plane"></i> Надіслана відповідь (Subject: Заперечення щодо фейкового кредиту...):</span>
+                            <button onclick="copyReplyText('${encodeURIComponent(msg.reply)}')" class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-2.5 py-1 rounded">Скопіювати текст листа</button>
                         </div>
                         <pre class="bg-slate-950 p-3 rounded text-emerald-300 font-mono text-xs leading-relaxed border border-emerald-500/20">${msg.reply}</pre>
                     </div>` : ''}
@@ -487,8 +417,9 @@
                 return;
             }
 
-            const defaultReply = `ОФІЦІЙНА ВІДПОВІДЬ АДВОКАТА НА ЦЕЙ ПИСЬМОВИЙ ЗАПИТ:
+            const defaultReply = `СТАТУС: ВІДПОВІДЬ ВІДПРАВЛЕНО КРЕДИТОРУ
 Кому: ТОВ "БІЗНЕС ПОЗИКА" (office@bizpozyka.com)
+Тема (Subject): Заперечення щодо фейкового кредиту та вимога скасування заборгованості — Договір № 478061-КС-002 (Бабак Г.М.)
 Від: Бабак Геннадій Миколайович (ІПН: 2615907039)
 
 ЗАПЕРЕЧЕННЯ НА ВИМОГУ ТА ПОВІДОМЛЕННЯ ПРО ФЕЙКОВИЙ КРЕДИТ
@@ -537,7 +468,7 @@
                 title.innerText = "Заява до Оболонського управління поліції (ст. 190 КК)";
                 content.innerText = 
 `Начальнику Оболонського управління поліції ГУНП у м. Києві
-Адреса: вул. Героїв полку «Азов», 2А, м. Київ, 04210
+Адреса: вул. Героїв полку «Азов», 2А, м. Києв, 04210
 Заявник: ${u.name}, ІПН: ${u.inn}
 Адреса: ${u.address}, Тел: ${u.phone}
 
@@ -565,9 +496,10 @@
             }
 
             if (type === 'creditor') {
-                title.innerText = "Офіційна відповідь на email: office@bizpozyka.com";
+                title.innerText = "Відправлений лист на email: office@bizpozyka.com";
                 content.innerText = 
 `Кому: office@bizpozyka.com
+Тема (Subject): Заперечення щодо фейкового кредиту та вимога скасування заборгованості — Договір № 478061-КС-002 (Бабак Г.М.)
 Від: ${u.name} (ІПН: ${u.inn})
 Адреса: ${u.address} | Тел: ${u.phone}
 
@@ -580,7 +512,7 @@
 
 Вважаю цей кредит оформленим шахрайським шляхом. Вимагаю негайно закрити борг, припинити стягнення та надати повну документацію для передачі до Оболонської поліції м. Києва.
 
-Дата: ${new Date().toLocaleDateString('uk-UA')}
+Дата відправки: ${new Date().toLocaleDateString('uk-UA')}
 Підпис: ____________ / ${u.name}`;
             }
         }
