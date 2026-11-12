@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .sidebar-active { background-color: #1e293b; border-left: 4px solid #3b82f6; }
+        .sidebar-active { background-color: #1e293b; border-left: 4px solid #3b82f6; color: #ffffff !important; }
         pre { white-space: pre-wrap; word-wrap: break-word; }
     </style>
 </head>
@@ -33,7 +33,7 @@
         </div>
 
         <nav class="space-y-1 flex-1">
-            <button onclick="switchTab('dashboard')" id="btn-dashboard" class="sidebar-active w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition text-left hover:bg-slate-800">
+            <button onclick="switchTab('dashboard')" id="btn-dashboard" class="sidebar-active w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition text-left hover:bg-slate-800 text-white">
                 <i class="fa-solid fa-chart-line text-blue-400 w-5"></i>
                 <span data-i18n="menu_dashboard">Дашборд справи</span>
             </button>
@@ -273,6 +273,7 @@
 
     <script>
         let currentLang = 'uk';
+        let currentDocType = 'police';
 
         const i18n = {
             uk: {
@@ -353,3 +354,256 @@
                 step_3_title: "Шаг 3: Направление претензии в ООО 'БИЗНЕС ПОЗИКА'",
                 step_3_desc: "Требование предоставить копию договора, выписки перечисления средств и заявление об отсутствии подписи.",
                 step_4_title: "Шаг 4: Обращение в НБУ",
+                step_4_desc: "Жалоба регулятору на нарушения финансовой организации и проверку факта выдачи средств.",
+                step_5_title: "Шаг 5: Проверка Оболонского районного суда и Реестра должников",
+                step_5_desc: "Мониторинг исполнительных производств, судебных исков и приказов Оболонского суда г. Киева.",
+                profile_heading: "Входные данные дела и госорганы",
+                user_data_title: "Мои персональные данные",
+                label_name: "ФИО",
+                label_inn: "ИНН (Налоговый номер)",
+                label_address: "Адрес проживания/регистрации",
+                label_phone: "Телефон",
+                btn_save: "Сохранить изменения",
+                creditor_data_title: "Данные организации и госорганов г. Киев",
+                label_creditor_name: "Финансовая организация",
+                label_police: "Полиция района",
+                label_court: "Суд района",
+                history_heading: "Реестр переписки и доказательств",
+                history_add_title: "Добавить новое сообщение / письмо от кредитора",
+                btn_add_history: "Сохранить в историю",
+                generator_heading: "Генератор официальных документов",
+                doc_btn_police: "Заявление в Полицию (Оболонское УП)",
+                doc_btn_nbu: "Жалоба в НБУ",
+                doc_btn_creditor: "Требование к ООО 'БИЗНЕС ПОЗИКА'",
+                btn_copy: "Скопировать текст",
+                consultant_heading: "Консультации Адвоката и Юридический Советник",
+                advice_1_title: "Что делать при запугивании исполнительной службой?",
+                advice_1_text: "Коллекторы присылают сообщения об 'исполнительном производстве'. На самом деле оно может открываться только на основе реального решения суда или исполнительной надписи нотариуса, которые подлежат отмене в судебном порядке.",
+                advice_2_title: "Порядок действий по Оболонскому району",
+                advice_2_text: "Заявление о мошенничестве следует подавать в Оболонское управление полиции (ул. Героев полка «Азов», 2А), а отмену возможных приказов или исков — через Оболонский районный суд г. Киева."
+            }
+        };
+
+        let appData = {
+            user: {
+                name: "Бабак Геннадій Миколайович",
+                inn: "2615907039",
+                address: "м. Київ, вул. Автозаводська, буд. 41, кв. 69",
+                phone: "+380971695556"
+            },
+            messages: [
+                {
+                    id: 1,
+                    date: new Date().toLocaleDateString('uk-UA'),
+                    sender: "ТОВ 'БІЗНЕС ПОЗИКА' (SMS/Viber)",
+                    text: `Шановний(на) Бабак Геннадій Миколайович!Повідомляємо, що по Вам Відкрито виконавче провадження про стягнення заборгованості.Для врегулювання боргу в добровільному порядку пропонуємо терміново зв’язатися з нами або перевірити наявні унікальні пропозиції в особистому кабінеті.http://cutt.ly/c2K7a3e0733423523 0800211503 office@bizpozyka.comВрегулювавши борг в досудовому порядку Ви зможете уникнути таких негативних наслідків, як: постійні листи від Приватного виконавця за адресою реєстрації, внесення Вас до реєстру боржників та блокування Ваших особистих рахунків, арешту рухомого та нерухомого майна. Дані наслідки застосовуються в процесі юридичного стягнення боргу.Термін дії пропозиції - ОБМЕЖЕНИЙ в часі !\nОтримувач: ТОВ "БІЗНЕС ПОЗИКА", Код ЄДРПОУ 41084239, Рахунок: Приват Банк UA20 305299 00000 26508046200938, МФО 305299. Призначення платежу: Погашення заборгованості ПІБ Бабак Геннадій Миколайович, ІПН 2615907039, Договір № 478061-КС-002`
+                }
+            ]
+        };
+
+        window.onload = function() {
+            const saved = localStorage.getItem('loyer_app_data');
+            if (saved) {
+                appData = JSON.parse(saved);
+            }
+            const savedLang = localStorage.getItem('loyer_lang');
+            if (savedLang) {
+                currentLang = savedLang;
+            }
+            updateTexts();
+            renderMessages();
+            generateDoc(currentDocType);
+        };
+
+        function saveData() {
+            localStorage.setItem('loyer_app_data', JSON.stringify(appData));
+            document.getElementById('dash-msg-count').innerText = appData.messages.length;
+        }
+
+        // Reliable Tab Switching
+        function switchTab(tabId) {
+            ['dashboard', 'profile', 'history', 'generator', 'consultant'].forEach(t => {
+                const section = document.getElementById('tab-' + t);
+                const btn = document.getElementById('btn-' + t);
+                if (section) section.classList.add('hidden');
+                if (btn) {
+                    btn.classList.remove('sidebar-active', 'text-white');
+                    btn.classList.add('text-slate-400');
+                }
+            });
+            const activeSection = document.getElementById('tab-' + tabId);
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if (activeSection) activeSection.classList.remove('hidden');
+            if (activeBtn) {
+                activeBtn.classList.add('sidebar-active', 'text-white');
+                activeBtn.classList.remove('text-slate-400');
+            }
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'uk' ? 'ru' : 'uk';
+            localStorage.setItem('loyer_lang', currentLang);
+            updateTexts();
+            generateDoc(currentDocType);
+        }
+
+        function updateTexts() {
+            const t = i18n[currentLang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    el.innerText = t[key];
+                }
+            });
+            document.getElementById('lang-btn').innerText = currentLang === 'uk' ? 'UA / RU' : 'RU / UA';
+        }
+
+        function renderMessages() {
+            const container = document.getElementById('messages-container');
+            container.innerHTML = '';
+            
+            appData.messages.forEach(msg => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-3";
+                card.innerHTML = `
+                    <div class="flex justify-between items-center text-xs text-slate-400 border-b border-slate-700 pb-2">
+                        <span class="font-bold text-blue-400">${msg.sender}</span>
+                        <span>${msg.date}</span>
+                    </div>
+                    <p class="text-sm text-slate-200 leading-relaxed font-mono whitespace-pre-wrap">${msg.text}</p>
+                `;
+                container.appendChild(card);
+            });
+            document.getElementById('dash-msg-count').innerText = appData.messages.length;
+        }
+
+        function addMessage() {
+            const text = document.getElementById('new-message-text').value.trim();
+            const sender = document.getElementById('new-message-sender').value.trim() || (currentLang === 'uk' ? 'Кредитор / Колектори' : 'Кредитор / Коллекторы');
+            
+            if (!text) {
+                alert(currentLang === 'uk' ? 'Будь ласка, введіть текст повідомлення' : 'Пожалуйста, введите текст сообщения');
+                return;
+            }
+
+            appData.messages.unshift({
+                id: Date.now(),
+                date: new Date().toLocaleDateString('uk-UA'),
+                sender: sender,
+                text: text
+            });
+
+            document.getElementById('new-message-text').value = '';
+            document.getElementById('new-message-sender').value = '';
+            saveData();
+            renderMessages();
+        }
+
+        function saveUserData() {
+            appData.user.name = document.getElementById('user-name').value;
+            appData.user.inn = document.getElementById('user-inn').value;
+            appData.user.address = document.getElementById('user-address').value;
+            appData.user.phone = document.getElementById('user-phone').value;
+            saveData();
+            alert(currentLang === 'uk' ? 'Дані успішно збережено!' : 'Данные успешно сохранены!');
+        }
+
+        function generateDoc(type) {
+            currentDocType = type;
+            const content = document.getElementById('doc-content');
+            const title = document.getElementById('doc-title');
+            const u = appData.user;
+
+            if (type === 'police') {
+                title.innerText = currentLang === 'uk' ? "Заява до Оболонського управління поліції (ст. 190 КК України)" : "Заявление в Оболонское управление полиции (ст. 190 УК Украины)";
+                content.innerText = 
+`Начальнику Оболонського управління поліції ГУНП у м. Києві
+Адреса: вул. Героїв полку «Азов», 2А, м. Київ, 04210
+Заявник: ${u.name}
+Адреса: ${u.address}
+Тел: ${u.phone}
+ІПН: ${u.inn}
+
+ЗАЯВА
+про вчинення кримінального правопорушення (ст. 190 КК України - Шахрайство)
+
+Я, ${u.name}, офіційно повідомляю про вчинення кримінального правопорушення щодо мене.
+Останнім часом на мій мобільний телефон почали надходити вимоги від ТОВ "БІЗНЕС ПОЗИКА" (ЄДРПОУ 41084239) про сплату заборгованості за Договором № 478061-КС-002.
+
+Офіційно заявляю та наголошую:
+1. Я ніколи не укладав жодних кредитних договорів з ТОВ "БІЗНЕС ПОЗИКА".
+2. Я не надавав згоди на обробку та використання моїх персональних даних цій організації.
+3. Я не отримував жодних коштів від ТОВ "БІЗНЕС ПОЗИКА" на свої банківські рахунки чи картки.
+
+Вважаю, що невстановлені особи шляхом шахрайства (обману та зловживання довірою), використавши мої персональні дані, незаконно оформили на моє ім'я фіктивний кредит (Договір № 478061-КС-002).
+
+Керуючись ст. 55, 60, 214 КПК України, ст. 190 КК України, -
+
+ПРОШУ:
+1. Прийняти цю заяву про вчинення кримінального правопорушення та невідкладно внести відомості до Єдиного реєстру досудових розслідувань (ЄРДР).
+2. Надати мені витяг з ЄРДР та документ про прийняття заяви.
+3. Провести повне та неупереджене розслідування фактів шахрайства.
+
+Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
+            }
+
+            if (type === 'nbu') {
+                title.innerText = currentLang === 'uk' ? "Скарга до Національного банку України (НБУ)" : "Жалоба в Национального банк Украины (НБУ)";
+                content.innerText = 
+`До Національного банку України
+вул. Інститутська, 9, м. Київ, 01008
+Заявник: ${u.name}
+Адреса: ${u.address}
+Тел: ${u.phone}
+
+СКАРГА
+щодо неправомірних дій ТОВ "БІЗНЕС ПОЗИКА" (ЄДРПОУ 41084239)
+
+ТОВ "БІЗНЕС ПОЗИКА" вимагає від мене погашення заборгованості за Договором № 478061-КС-002.
+Заявляю, що даний кредит я не оформлював, коштів не отримував та жодних електронних чи інших підписів не ставив. Фінансова організація здійснює неправомірні атаки та залякування.
+
+ПРОШУ:
+1. Провести перевірку діяльності ТОВ "БІЗНЕС ПОЗИКА" щодо законності укладення договору № 478061-КС-002.
+2. Витребувати докази реального перерахування коштів та ідентифікації клієнта.
+3. Зобов'язати кредитора припинити незаконні вимоги.
+
+Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
+            }
+
+            if (type === 'creditor') {
+                title.innerText = currentLang === 'uk' ? "Заперечення-Вимога до ТОВ 'БІЗНЕС ПОЗИКА'" : "Возражение-Требование к ООО 'БИЗНЕС ПОЗИКА'";
+                content.innerText = 
+`Директору ТОВ "БІЗНЕС ПОЗИКА"
+Код ЄДРПОУ: 41084239
+office@bizpozyka.com
+
+Від: ${u.name}
+Адреса: ${u.address}
+Тел: ${u.phone}
+
+ЗАПЕРЕЧЕННЯ ТА ВИМОГА
+щодо нібито заборгованості за Договором № 478061-КС-002
+
+У відповідь на ваші сповіщення повідомляю, що я, ${u.name}, не укладав Договір № 478061-КС-002 та не отримував від вашої компанії жодних коштів.
+
+На підставі законодавства України -
+
+ВИМАГАЮ:
+1. Надати належним чином завірену копію Договору № 478061-КС-002 та докази його підписання (з фіксацією ЕЦП/OTP).
+2. Надати банківську виписку або платіжне доручення, що підтверджує перерахування коштів на мій особистий банківський рахунок.
+3. Негайно припинити будь-які вимоги та виключити мої дані з баз боржників.
+
+У разі ігнорування цієї вимоги матеріали будуть передані до Оболонського управління поліції за ст. 190 КК України.
+
+Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
+            }
+        }
+
+        function copyDocText() {
+            const text = document.getElementById('doc-content').innerText;
+            navigator.clipboard.writeText(text);
+            alert(currentLang === 'uk' ? 'Текст документа успішно скопійовано у буфер обміну!' : 'Текст документа успешно скопирован в буфер обмена!');
+        }
+    </script>
+</body>
+</html>
