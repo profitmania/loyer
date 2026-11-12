@@ -16,46 +16,52 @@
 
     <!-- Sidebar Navigation -->
     <aside class="w-full md:w-72 bg-slate-950 p-4 flex flex-col border-r border-slate-800">
-        <div class="flex items-center space-x-3 mb-8 px-2">
-            <div class="bg-blue-600 p-2.5 rounded-lg text-white">
-                <i class="fa-solid fa-gavel text-xl"></i>
+        <div class="flex items-center justify-between mb-8 px-2">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 p-2.5 rounded-lg text-white">
+                    <i class="fa-solid fa-gavel text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight text-white" id="nav-title">АДВОКАТ</h1>
+                    <p class="text-xs text-slate-400" id="nav-subtitle">Захист від кредиторів</p>
+                </div>
             </div>
-            <div>
-                <h1 class="font-bold text-lg leading-tight text-white">АДВОКАТ (LAWYER)</h1>
-                <p class="text-xs text-slate-400">Захист від кредиторів</p>
-            </div>
+            <!-- Language Switcher -->
+            <button onclick="toggleLanguage()" class="bg-slate-800 hover:bg-slate-700 text-xs text-blue-400 font-bold px-2.5 py-1.5 rounded border border-slate-700 transition" id="lang-btn">
+                UA / RU
+            </button>
         </div>
 
         <nav class="space-y-1 flex-1">
             <button onclick="switchTab('dashboard')" id="btn-dashboard" class="sidebar-active w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition text-left hover:bg-slate-800">
                 <i class="fa-solid fa-chart-line text-blue-400 w-5"></i>
-                <span>Дашборд справи</span>
+                <span data-i18n="menu_dashboard">Дашборд справи</span>
             </button>
 
             <button onclick="switchTab('profile')" id="btn-profile" class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition text-left hover:bg-slate-800 text-slate-400">
                 <i class="fa-solid fa-user-shield text-blue-400 w-5"></i>
-                <span>Вхідні дані та Сторони</span>
+                <span data-i18n="menu_profile">Вхідні дані та Сторони</span>
             </button>
 
             <button onclick="switchTab('history')" id="btn-history" class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition text-left hover:bg-slate-800 text-slate-400">
                 <i class="fa-solid fa-inbox text-blue-400 w-5"></i>
-                <span>Реєстр листування</span>
+                <span data-i18n="menu_history">Реєстр листування</span>
             </button>
 
             <button onclick="switchTab('generator')" id="btn-generator" class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition text-left hover:bg-slate-800 text-slate-400">
                 <i class="fa-solid fa-file-signature text-blue-400 w-5"></i>
-                <span>Генератор документів</span>
+                <span data-i18n="menu_generator">Генератор документів</span>
             </button>
 
             <button onclick="switchTab('consultant')" id="btn-consultant" class="w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition text-left hover:bg-slate-800 text-slate-400">
                 <i class="fa-solid fa-user-doctor text-blue-400 w-5"></i>
-                <span>Поради юриста</span>
+                <span data-i18n="menu_consultant">Поради юриста</span>
             </button>
         </nav>
 
-        <div class="pt-4 border-t border-slate-800 text-xs text-slate-500">
-            <p>Статус: <span class="text-emerald-400 font-semibold">Активний захист</span></p>
-            <p class="mt-1">Юрисдикція: Київ, Україна</p>
+        <div class="pt-4 border-t border-slate-800 text-xs text-slate-500 space-y-1">
+            <p><span data-i18n="status_label">Статус</span>: <span class="text-emerald-400 font-semibold" data-i18n="status_val">Активний захист</span></p>
+            <p><span data-i18n="jurisdiction_label">Юрисдикція</span>: Київ, Україна</p>
         </div>
     </aside>
 
@@ -64,31 +70,31 @@
 
         <!-- TAB: DASHBOARD -->
         <section id="tab-dashboard" class="space-y-6">
-            <div class="flex justify-between items-center bg-slate-800 p-6 rounded-xl border border-slate-700">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-slate-800 p-6 rounded-xl border border-slate-700 gap-4">
                 <div>
-                    <h2 class="text-2xl font-bold text-white mb-1">Справа: ТОВ "БІЗНЕС ПОЗИКА"</h2>
-                    <p class="text-sm text-slate-400">Договір № 478061-КС-002 • Категорія: Шахрайський кредит (Фейк)</p>
+                    <h2 class="text-2xl font-bold text-white mb-1"><span data-i18n="dash_case_title">Справа</span>: ТОВ "БІЗНЕС ПОЗИКА"</h2>
+                    <p class="text-sm text-slate-400" data-i18n="dash_case_subtitle">Договір № 478061-КС-002 • Категорія: Шахрайський кредит (Фейк)</p>
                 </div>
-                <span class="px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold rounded-full">
+                <span class="px-3 py-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-semibold rounded-full" data-i18n="dash_badge">
                     Досудове врегулювання / Виконавче провадження
                 </span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-xs text-slate-400 mb-1">Позивач / Стягувач</div>
+                    <div class="text-xs text-slate-400 mb-1" data-i18n="creditor_label">Позивач / Стягувач</div>
                     <div class="text-lg font-semibold text-white">ТОВ "БІЗНЕС ПОЗИКА"</div>
                     <div class="text-xs text-slate-400 mt-2">ЄДРПОУ: 41084239</div>
                 </div>
 
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-xs text-slate-400 mb-1">Відповідач / Боржник</div>
+                    <div class="text-xs text-slate-400 mb-1" data-i18n="debtor_label">Відповідач / Боржник</div>
                     <div class="text-lg font-semibold text-white">Бабак Геннадій Миколайович</div>
                     <div class="text-xs text-slate-400 mt-2">ІПН: 2615907039</div>
                 </div>
 
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                    <div class="text-xs text-slate-400 mb-1">Зафіксовано повідомлень</div>
+                    <div class="text-xs text-slate-400 mb-1" data-i18n="msg_count_label">Зафіксовано повідомлень</div>
                     <div class="text-3xl font-bold text-blue-400" id="dash-msg-count">1</div>
                     <div class="text-xs text-slate-400 mt-1">Останнє: 0800211503</div>
                 </div>
@@ -97,42 +103,42 @@
             <!-- Action Strategy Plan -->
             <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                 <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                    <i class="fa-solid fa-list-check text-blue-400"></i> План дій юридичного захисту
+                    <i class="fa-solid fa-list-check text-blue-400"></i> <span data-i18n="plan_title">План дій юридичного захисту</span>
                 </h3>
                 <div class="space-y-4">
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" checked disabled class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-emerald-400">Крок 1: Фіксація фактів шахрайства</div>
-                            <p class="text-xs text-slate-400">Всі дані кредиту, реквізити та тексти повідомлень зафіксовано у базі додатку.</p>
+                            <div class="font-semibold text-sm text-emerald-400" data-i18n="step_1_title">Крок 1: Фіксація фактів шахрайства</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_1_desc">Всі дані кредиту, реквізити та тексти повідомлень зафіксовано у базі додатку.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step2" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200">Крок 2: Подача заяви про злочин (Поліція / ст. 190 КК)</div>
-                            <p class="text-xs text-slate-400">Подати заяву до Національної поліції України про оформлення кредиту шахраями на ваше ім'я.</p>
+                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_2_title">Крок 2: Подача заяви про злочин (Оболонське управління поліції / ст. 190 КК)</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_2_desc">Подати заяву до Оболонського УП ГУНП у м. Києві про оформлення кредиту шахраями на ваше ім'я.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step3" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200">Крок 3: Направлення претензії в ТОВ "БІЗНЕС ПОЗИКА"</div>
-                            <p class="text-xs text-slate-400">Вимога надати копію договору, виписки перерахування коштів та заява про відсутність підпису.</p>
+                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_3_title">Крок 3: Направлення претензії в ТОВ "БІЗНЕС ПОЗИКА"</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_3_desc">Вимога надати копію договору, виписки перерахування коштів та заява про відсутність підпису.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step4" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200">Крок 4: Звернення до НБУ</div>
-                            <p class="text-xs text-slate-400">Скарга регулятору на порушення фінансової організації та перевірку факту видачі коштів.</p>
+                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_4_title">Крок 4: Звернення до НБУ</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_4_desc">Скарга регулятору на порушення фінансової організації та перевірку факту видачі коштів.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step5" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200">Крок 5: Перевірка Єдиного реєстру боржників та АСВП</div>
-                            <p class="text-xs text-slate-400">Моніторинг наявності реального виконавчого провадження або виконавчого напису нотаріуса.</p>
+                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_5_title">Крок 5: Перевірка Оболонського районного суду та Реєстру боржників</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_5_desc">Моніторинг виконавчих проваджень, судових позовів та наказів Оболонського суду м. Києва.</p>
                         </div>
                     </div>
                 </div>
@@ -141,57 +147,49 @@
 
         <!-- TAB: PROFILE / DATA -->
         <section id="tab-profile" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4">Вхідні дані справи</h2>
+            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="profile_heading">Вхідні дані справи та державні органи</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- User Data -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
-                    <h3 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2">Мої персональні дані</h3>
+                    <h3 class="text-lg font-bold text-blue-400 border-b border-slate-700 pb-2" data-i18n="user_data_title">Мої персональні дані</h3>
                     <div>
-                        <label class="text-xs text-slate-400">ПІБ</label>
+                        <label class="text-xs text-slate-400" data-i18n="label_name">ПІБ</label>
                         <input type="text" id="user-name" value="Бабак Геннадій Миколайович" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-sm text-white">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400">ІПН (Податковий номер)</label>
+                        <label class="text-xs text-slate-400" data-i18n="label_inn">ІПН (Податковий номер)</label>
                         <input type="text" id="user-inn" value="2615907039" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-sm text-white">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400">Адреса проживання/реєстрації</label>
+                        <label class="text-xs text-slate-400" data-i18n="label_address">Адреса проживання/реєстрації</label>
                         <input type="text" id="user-address" value="м. Київ, вул. Автозаводська, буд. 41, кв. 69" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-sm text-white">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400">Телефон</label>
+                        <label class="text-xs text-slate-400" data-i18n="label_phone">Телефон</label>
                         <input type="text" id="user-phone" value="+380971695556" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-sm text-white">
                     </div>
-                    <button onclick="saveUserData()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded">Зберегти зміни</button>
+                    <button onclick="saveUserData()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-2 rounded" data-i18n="btn_save">Зберегти зміни</button>
                 </div>
 
-                <!-- Creditor Data -->
+                <!-- Creditor & Authorities Data -->
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
-                    <h3 class="text-lg font-bold text-red-400 border-b border-slate-700 pb-2">Данні організації (Кредитора)</h3>
+                    <h3 class="text-lg font-bold text-red-400 border-b border-slate-700 pb-2" data-i18n="creditor_data_title">Дані організації та держорганів м. Київ</h3>
                     <div>
-                        <label class="text-xs text-slate-400">Назва організації</label>
-                        <input type="text" value="ТОВ 'БІЗНЕС ПОЗИКА'" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
+                        <label class="text-xs text-slate-400" data-i18n="label_creditor_name">Фінансова організація</label>
+                        <input type="text" value="ТОВ 'БІЗНЕС ПОЗИКА' (ЄДРПОУ 41084239)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400">Код ЄДРПОУ</label>
-                        <input type="text" value="41084239" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
+                        <label class="text-xs text-slate-400" data-i18n="label_police">Поліція району</label>
+                        <input type="text" value="Оболонське управління поліції ГУНП у м. Києві (вул. Героїв полку «Азов», 2А)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400">Рахунок (IBAN)</label>
-                        <input type="text" value="UA203052990000026508046200938" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
+                        <label class="text-xs text-slate-400" data-i18n="label_court">Суд району</label>
+                        <input type="text" value="Оболонський районний суд міста Києва (вул. Левка Лук'яненка, 2Є)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400">Банк / МФО</label>
-                        <input type="text" value="ПриватБанк (МФО 305299)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
-                    </div>
-                    <div>
-                        <label class="text-xs text-slate-400">Номер договору (із повідомлення)</label>
-                        <input type="text" value="478061-КС-002" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
-                    </div>
-                    <div>
-                        <label class="text-xs text-slate-400">Контакти шахраїв/кредитора</label>
-                        <input type="text" value="0800211503 | office@bizpozyka.com" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
+                        <label class="text-xs text-slate-400">Реквізити договору / рахунку</label>
+                        <input type="text" value="Договір № 478061-КС-002 | ПриватБанк UA203052990000026508046200938" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                 </div>
             </div>
@@ -199,38 +197,38 @@
 
         <!-- TAB: MESSAGES / HISTORY -->
         <section id="tab-history" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4">Реєстр листування та доказів</h2>
+            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="history_heading">Реєстр листування та доказів</h2>
 
             <!-- Input Box -->
             <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
-                <h3 class="text-md font-semibold text-white">Додати нове повідомлення / лист від кредитора</h3>
+                <h3 class="text-md font-semibold text-white" data-i18n="history_add_title">Додати нове повідомлення / лист від кредитора</h3>
                 <textarea id="new-message-text" rows="4" placeholder="Вставте сюди скопійований текст SMS, електронного чи паперового листа..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
-                <div class="flex justify-between items-center">
-                    <input type="text" id="new-message-sender" placeholder="Від кого (напр. SMS BizPozyka)" class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white w-64">
-                    <button onclick="addMessage()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2 rounded-lg font-medium flex items-center gap-2">
-                        <i class="fa-solid fa-plus"></i> Зберегти в історію
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <input type="text" id="new-message-sender" placeholder="Від кого (напр. SMS BizPozyka)" class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white w-full md:w-64">
+                    <button onclick="addMessage()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2 rounded-lg font-medium flex items-center gap-2 w-full md:w-auto justify-center">
+                        <i class="fa-solid fa-plus"></i> <span data-i18n="btn_add_history">Зберегти в історію</span>
                     </button>
                 </div>
             </div>
 
             <!-- Messages List -->
             <div class="space-y-4" id="messages-container">
-                <!-- Initial Message Populated via JS -->
+                <!-- Populated via JS -->
             </div>
         </section>
 
         <!-- TAB: DOCUMENT GENERATOR -->
         <section id="tab-generator" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4">Генератор офіційних документів</h2>
+            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="generator_heading">Генератор офіційних документів</h2>
             
-            <div class="flex gap-4 border-b border-slate-800 pb-4">
-                <button onclick="generateDoc('police')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium">
-                    Заява до Поліції (ст. 190 КК)
+            <div class="flex flex-wrap gap-3 border-b border-slate-800 pb-4">
+                <button onclick="generateDoc('police')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-i18n="doc_btn_police">
+                    Заява до Поліції (Оболонське УП)
                 </button>
-                <button onclick="generateDoc('nbu')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium">
+                <button onclick="generateDoc('nbu')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-i18n="doc_btn_nbu">
                     Скарга до НБУ
                 </button>
-                <button onclick="generateDoc('creditor')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium">
+                <button onclick="generateDoc('creditor')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-i18n="doc_btn_creditor">
                     Вимога до ТОВ "БІЗНЕС ПОЗИКА"
                 </button>
             </div>
@@ -239,7 +237,7 @@
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-md font-bold text-blue-400" id="doc-title">Заява про вчинення кримінального правопорушення (Шахрайство)</h3>
                     <button onclick="copyDocText()" class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-3 py-1.5 rounded flex items-center gap-1.5">
-                        <i class="fa-regular fa-copy"></i> Скопіювати текст
+                        <i class="fa-regular fa-copy"></i> <span data-i18n="btn_copy">Скопіювати текст</span>
                     </button>
                 </div>
                 <pre id="doc-content" class="bg-slate-950 p-4 rounded-lg text-slate-300 font-mono text-xs leading-relaxed max-h-[500px] overflow-y-auto border border-slate-800"></pre>
@@ -248,36 +246,25 @@
 
         <!-- TAB: CONSULTANT / ADVICE -->
         <section id="tab-consultant" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4">Консультації Адвоката та Юридичний Порадник</h2>
+            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="consultant_heading">Консультації Адвоката та Юридичний Порадник</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-3">
                     <div class="text-blue-400 font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-triangle-exclamation"></i> Що робити при залякуванні приватним виконавцем?
+                        <i class="fa-solid fa-triangle-exclamation"></i> <span data-i18n="advice_1_title">Що робити при залякуванні виконавчою службою?</span>
                     </div>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        Колектори часто пишуть у SMS про "відкрито виконавче провадження". Насправді виконавче провадження може бути відкрите лише на підставі:
-                    </p>
-                    <ul class="list-disc list-inside text-xs text-slate-400 space-y-1">
-                        <li>Рішення суду (якого не було, бо ви не отримували повісток).</li>
-                        <li>Виконавчого напису нотаріуса (більшість з яких зараз успішно оскаржуються та скасовуються в судовому порядку).</li>
-                    </ul>
-                    <p class="text-xs text-slate-400">
-                        Обов'язково перевірте себе у **Єдиному реєстрі боржників України** (erb.minjust.gov.ua). Якщо вас там немає — SMS є звичайним психологічним тиском.
+                    <p class="text-sm text-slate-300 leading-relaxed" data-i18n="advice_1_text">
+                        Колектори надсилають повідомлення про "виконавче провадження". Насправді воно може відкриватись лише на основі реального рішення суду або виконавчого напису нотаріуса, які підлягають скасуванню у судовому порядку.
                     </p>
                 </div>
 
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-3">
                     <div class="text-emerald-400 font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-shield-halved"></i> Доказова база відсутності кредиту
+                        <i class="fa-solid fa-shield-halved"></i> <span data-i18n="advice_2_title">Порядок дій по Оболонському району</span>
                     </div>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        Оскільки ви не підписували договір і не отримували коштів:
+                    <p class="text-sm text-slate-300 leading-relaxed" data-i18n="advice_2_text">
+                        Заяву про шахрайство слід подавати до Оболонського управління поліції (вул. Героїв полку «Азов», 2А), а скасування можливих наказів чи позовів — через Оболонський районний суд м. Києва.
                     </p>
-                    <ul class="list-disc list-inside text-xs text-slate-400 space-y-1">
-                        <li>Вони зобов'язані надати електронно-цифровий підпис (ЕЦП/одноразовий SMS-код) та IP-адресу, з якої робилася заявка.</li>
-                        <li>Виписка з вашого банківського рахунку за відповідну дату підтвердить, що транзакцій від ТОВ "БІЗНЕС ПОЗИКА" не надходило.</li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -285,196 +272,84 @@
     </main>
 
     <script>
-        // App State & Data Storage
-        let appData = {
-            user: {
-                name: "Бабак Геннадій Миколайович",
-                inn: "2615907039",
-                address: "м. Київ, вул. Автозаводська, буд. 41, кв. 69",
-                phone: "+380971695556"
+        let currentLang = 'uk';
+
+        const i18n = {
+            uk: {
+                nav_title: "АДВОКАТ",
+                nav_subtitle: "Захист від кредиторів",
+                menu_dashboard: "Дашборд справи",
+                menu_profile: "Вхідні дані та Сторони",
+                menu_history: "Реєстр листування",
+                menu_generator: "Генератор документів",
+                menu_consultant: "Поради юриста",
+                status_label: "Статус",
+                status_val: "Активний захист",
+                jurisdiction_label: "Юрисдикція",
+                dash_case_title: "Справа",
+                dash_case_subtitle: "Договір № 478061-КС-002 • Категорія: Шахрайський кредит (Фейк)",
+                dash_badge: "Досудове врегулювання / Виконавче провадження",
+                creditor_label: "Позивач / Стягувач",
+                debtor_label: "Відповідач / Боржник",
+                msg_count_label: "Зафіксовано повідомлень",
+                plan_title: "План дій юридичного захисту",
+                step_1_title: "Крок 1: Фіксація фактів шахрайства",
+                step_1_desc: "Всі дані кредиту, реквізити та тексти повідомлень зафіксовано у базі додатку.",
+                step_2_title: "Крок 2: Подача заяви про злочин (Оболонське управління поліції / ст. 190 КК)",
+                step_2_desc: "Подати заяву до Оболонського УП ГУНП у м. Києві про оформлення кредиту шахраями на ваше ім'я.",
+                step_3_title: "Крок 3: Направлення претензії в ТОВ 'БІЗНЕС ПОЗИКА'",
+                step_3_desc: "Вимога надати копію договору, виписки перерахування коштів та заява про відсутність підпису.",
+                step_4_title: "Крок 4: Звернення до НБУ",
+                step_4_desc: "Скарга регулятору на порушення фінансової організації та перевірку факту видачі коштів.",
+                step_5_title: "Крок 5: Перевірка Оболонського районного суду та Реєстру боржників",
+                step_5_desc: "Моніторинг виконавчих проваджень, судових позовів та наказів Оболонського суду м. Києва.",
+                profile_heading: "Вхідні дані справи та державні органи",
+                user_data_title: "Мої персональні дані",
+                label_name: "ПІБ",
+                label_inn: "ІПН (Податковий номер)",
+                label_address: "Адреса проживання/реєстрації",
+                label_phone: "Телефон",
+                btn_save: "Зберегти зміни",
+                creditor_data_title: "Дані організації та держорганів м. Київ",
+                label_creditor_name: "Фінансова організація",
+                label_police: "Поліція району",
+                label_court: "Суд району",
+                history_heading: "Реєстр листування та доказів",
+                history_add_title: "Додати нове повідомлення / лист від кредитора",
+                btn_add_history: "Зберегти в історію",
+                generator_heading: "Генератор офіційних документів",
+                doc_btn_police: "Заява до Поліції (Оболонське УП)",
+                doc_btn_nbu: "Скарга до НБУ",
+                doc_btn_creditor: "Вимога до ТОВ 'БІЗНЕС ПОЗИКА'",
+                btn_copy: "Скопіювати текст",
+                consultant_heading: "Консультації Адвоката та Юридичний Порадник",
+                advice_1_title: "Що робити при залякуванні виконавчою службою?",
+                advice_1_text: "Колектори надсилають повідомлення про 'виконавче провадження'. Насправді воно може відкриватись лише на основі реального рішення суду або виконавчого напису нотаріуса, які підлягають скасуванню у судовому порядку.",
+                advice_2_title: "Порядок дій по Оболонському району",
+                advice_2_text: "Заяву про шахрайство слід подавати до Оболонського управління поліції (вул. Героїв полку «Азов», 2А), а скасування можливих наказів чи позовів — через Оболонський районний суд м. Києва."
             },
-            messages: [
-                {
-                    id: 1,
-                    date: new Date().toLocaleDateString('uk-UA'),
-                    sender: "ТОВ 'БІЗНЕС ПОЗИКА' (SMS/Viber)",
-                    text: `Шановний(на) Бабак Геннадій Миколайович!Повідомляємо, що по Вам Відкрито виконавче провадження про стягнення заборгованості.Для врегулювання боргу в добровільному порядку пропонуємо терміново зв’язатися з нами або перевірити наявні унікальні пропозиції в особистому кабінеті.http://cutt.ly/c2K7a3e0733423523 0800211503 office@bizpozyka.comВрегулювавши борг в досудовому порядку Ви зможете уникнути таких негативних наслідків, як: постійні листи від Приватного виконавця за адресою реєстрації, внесення Вас до реєстру боржників та блокування Ваших особистих рахунків, арешту рухомого та нерухомого майна. Дані наслідки застосовуються в процесі юридичного стягнення боргу.Термін дії пропозиції - ОБМЕЖЕНИЙ в часі !\nОтримувач: ТОВ "БІЗНЕС ПОЗИКА", Код ЄДРПОУ 41084239, Рахунок: Приват Банк UA20 305299 00000 26508046200938, МФО 305299. Призначення платежу: Погашення заборгованості ПІБ Бабак Геннадій Миколайович, ІПН 2615907039, Договір № 478061-КС-002`
-                }
-            ]
-        };
-
-        // Load data on startup
-        window.onload = function() {
-            const saved = localStorage.getItem('loyer_app_data');
-            if (saved) {
-                appData = JSON.parse(saved);
-            }
-            renderMessages();
-            generateDoc('police');
-        };
-
-        function saveData() {
-            localStorage.setItem('loyer_app_data', JSON.stringify(appData));
-            document.getElementById('dash-msg-count').innerText = appData.messages.length;
-        }
-
-        // Tab Switching
-        function switchTab(tabId) {
-            ['dashboard', 'profile', 'history', 'generator', 'consultant'].forEach(t => {
-                document.getElementById('tab-' + t).classList.add('hidden');
-                document.getElementById('btn-' + t).classList.remove('sidebar-active', 'text-white');
-                document.getElementById('btn-' + t).classList.add('text-slate-400');
-            });
-            document.getElementById('tab-' + tabId).classList.remove('hidden');
-            document.getElementById('btn-' + tabId).classList.add('sidebar-active', 'text-white');
-        }
-
-        // Render Messages
-        function renderMessages() {
-            const container = document.getElementById('messages-container');
-            container.innerHTML = '';
-            
-            appData.messages.forEach(msg => {
-                const card = document.createElement('div');
-                card.className = "bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-3";
-                card.innerHTML = `
-                    <div class="flex justify-between items-center text-xs text-slate-400 border-b border-slate-700 pb-2">
-                        <span class="font-bold text-blue-400">${msg.sender}</span>
-                        <span>${msg.date}</span>
-                    </div>
-                    <p class="text-sm text-slate-200 leading-relaxed font-mono whitespace-pre-wrap">${msg.text}</p>
-                `;
-                container.appendChild(card);
-            });
-            document.getElementById('dash-msg-count').innerText = appData.messages.length;
-        }
-
-        // Add New Message
-        function addMessage() {
-            const text = document.getElementById('new-message-text').value.trim();
-            const sender = document.getElementById('new-message-sender').value.trim() || 'Кредитор / Колектори';
-            
-            if (!text) return alert('Будь ласка, введіть текст повідомлення');
-
-            appData.messages.unshift({
-                id: Date.now(),
-                date: new Date().toLocaleDateString('uk-UA'),
-                sender: sender,
-                text: text
-            });
-
-            document.getElementById('new-message-text').value = '';
-            document.getElementById('new-message-sender').value = '';
-            saveData();
-            renderMessages();
-        }
-
-        // User Data Saving
-        function saveUserData() {
-            appData.user.name = document.getElementById('user-name').value;
-            appData.user.inn = document.getElementById('user-inn').value;
-            appData.user.address = document.getElementById('user-address').value;
-            appData.user.phone = document.getElementById('user-phone').value;
-            saveData();
-            alert('Дані успішно збережено!');
-        }
-
-        // Document Generation Templates
-        function generateDoc(type) {
-            const content = document.getElementById('doc-content');
-            const title = document.getElementById('doc-title');
-            const u = appData.user;
-
-            if (type === 'police') {
-                title.innerText = "Заява до Поліції про кримінальне правопорушення (ст. 190 КК України)";
-                content.innerText = 
-`Начальнику Оболонського УП ГУНП у м. Києві
-(або за місцем проживання)
-Заявник: ${u.name}
-Адреса: ${u.address}
-Тел: ${u.phone}
-ІПН: ${u.inn}
-
-ЗАЯВА
-про вчинення кримінального правопорушення (ст. 190 КК України - Шахрайство)
-
-Я, ${u.name}, повідомляю про вчинення щодо мене кримінального правопорушення.
-Останнім часом на мій мобільний телефон почали надходити повідомлення від ТОВ "БІЗНЕС ПОЗИКА" (ЄДРПОУ 41084239) з вимогою сплатити заборгованість за Договором № 478061-КС-002.
-
-Офіційно заявляю:
-1. Я ніколи не укладав жодних договорів позики чи кредиту з ТОВ "БІЗНЕС ПОЗИКА".
-2. Я не надавав згоди на використання моїх персональних даних цій організації.
-3. Я не отримував жодних коштів від ТОВ "БІЗНЕС ПОЗИКА" на мої банківські рахунки чи картки.
-
-Вважаю, що невідомі особи, шляхом обману та зловживання довірою, використовуючи мої персональні дані, оформили забірний Договір № 478061-КС-002 на моє ім'я з метою заволодіння чужим майном.
-
-Керуючись ст. 55, 60, 214 КПК України, ст. 190 КК України, -
-
-ПРОШУ:
-1. Прийняти дану заяву про вчинення кримінального правопорушення та невідкладно внести відповідні відомості до Єдиного реєстру досудових розслідувань (ЄРДР).
-2. Надати мені витяг з ЄРДР та талон-повідомлення.
-3. Провести розслідування фактів шахрайського оформлення кредиту на моє ім'я.
-
-Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
-            }
-
-            if (type === 'nbu') {
-                title.innerText = "Скарга до Національного банку України (НБУ)";
-                content.innerText = 
-`До Національного банку України
-вул. Інститутська, 9, м. Київ, 01008
-Заявник: ${u.name}
-Адреса: ${u.address}
-Тел: ${u.phone}
-
-СКАРГА
-щодо неправомірних дій ТОВ "БІЗНЕС ПОЗИКА" (ЄДРПОУ 41084239)
-
-ТОВ "БІЗНЕС ПОЗИКА" вимагає від мене заборгованість за Договором № 478061-КС-002.
-Я зазначений кредит не оформлював, коштів не отримував та підписів не ставив. ТОВ "БІЗНЕС ПОЗИКА" здійснює тиск та залякування щодо відкриття виконавчих проваджень без надання доказів укладення договору.
-
-ПРОШУ:
-1. Провести перевірку ТОВ "БІЗНЕС ПОЗИКА" щодо дотримання законодавства при укладенні договору № 478061-КС-002.
-2. Вимогти у фінансової установи належні докази підписання договору (ЕЦП, логи, виписки).
-3. Зобов'язати ТОВ "БІЗНЕС ПОЗИКА" припинити незаконні вимоги сплати заборгованості.
-
-Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
-            }
-
-            if (type === 'creditor') {
-                title.innerText = "Заперечення-Вимога до ТОВ 'БІЗНЕС ПОЗИКА'";
-                content.innerText = 
-`Директору ТОВ "БІЗНЕС ПОЗИКА"
-Код ЄДРПОУ: 41084239
-office@bizpozyka.com
-
-Від: ${u.name}
-Адреса: ${u.address}
-Тел: ${u.phone}
-
-ЗАПЕРЕЧЕННЯ-ВИМОГА
-щодо Договору № 478061-КС-002
-
-У відповідь на ваші вимоги повідомляю, що я, ${u.name}, не укладав Договір № 478061-КС-002 та не отримував від вашої організації жодних грошових коштів.
-
-На підставі ЗУ "Про захист прав споживачів" та ЗУ "Про електронну комерцію" -
-
-ВИМАГАЮ:
-1. Надати копію Договору № 478061-КС-002 та докази його підписання (ЕЦП/одноразовий пароль).
-2. Надати меморіальний ордер/банківську виписку, яка підтверджує факт перерахування коштів на МІЙ ОСОБИСТИЙ банківський рахунок.
-3. Припинити обробку моїх персональних даних та вимагати виплату несумісної заборгованості.
-
-У разі продовження вимогання коштів без надання доказів матеріали будуть передані до Національної поліції України за ст. 189, 190 КК України.
-
-Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
-            }
-        }
-
-        function copyDocText() {
-            const text = document.getElementById('doc-content').innerText;
-            navigator.clipboard.writeText(text);
-            alert('Текст документа успішно скопійовано у буфер обміну!');
-        }
-    </script>
-</body>
-</html>
+            ru: {
+                nav_title: "АДВОКАТ",
+                nav_subtitle: "Защита от кредиторов",
+                menu_dashboard: "Дашборд дела",
+                menu_profile: "Входные данные и Стороны",
+                menu_history: "Реестр переписки",
+                menu_generator: "Генератор документов",
+                menu_consultant: "Советы юриста",
+                status_label: "Статус",
+                status_val: "Активная защита",
+                jurisdiction_label: "Юрисдикция",
+                dash_case_title: "Дело",
+                dash_case_subtitle: "Договор № 478061-КС-002 • Категория: Мошеннический кредит (Фейк)",
+                dash_badge: "Досудебное урегулирование / Исполнительное производство",
+                creditor_label: "Истец / Взыскатель",
+                debtor_label: "Ответчик / Должник",
+                msg_count_label: "Зафиксировано сообщений",
+                plan_title: "План действий юридической защиты",
+                step_1_title: "Шаг 1: Фиксация фактов мошенничества",
+                step_1_desc: "Все данные кредита, реквизиты и тексты сообщений зафиксированы в базе приложения.",
+                step_2_title: "Шаг 2: Подача заявления о преступлении (Оболонское УП / ст. 190 УК)",
+                step_2_desc: "Подать заявление в Оболонское УП ГУНП в г. Киеве об оформлении кредита мошенниками на ваше имя.",
+                step_3_title: "Шаг 3: Направление претензии в ООО 'БИЗНЕС ПОЗИКА'",
+                step_3_desc: "Требование предоставить копию договора, выписки перечисления средств и заявление об отсутствии подписи.",
+                step_4_title: "Шаг 4: Обращение в НБУ",
