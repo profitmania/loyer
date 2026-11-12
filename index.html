@@ -84,7 +84,7 @@
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
                     <div class="text-xs text-slate-400 mb-1" data-i18n="creditor_label">Позивач / Стягувач</div>
                     <div class="text-lg font-semibold text-white">ТОВ "БІЗНЕС ПОЗИКА"</div>
-                    <div class="text-xs text-slate-400 mt-2">ЄДРПОУ: 41084239</div>
+                    <div class="text-xs text-slate-400 mt-2">ЄДРПОУ: 41084239 | office@bizpozyka.com</div>
                 </div>
 
                 <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
@@ -109,36 +109,29 @@
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" checked disabled class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-emerald-400" data-i18n="step_1_title">Крок 1: Фіксація фактів шахрайства</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_1_desc">Всі дані кредиту, реквізити та тексти повідомлень зафіксовано у базі додатку.</p>
+                            <div class="font-semibold text-sm text-emerald-400" data-i18n="step_1_title">Крок 1: Фіксація фактів шахрайства та підготовка відповіді</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_1_desc">Лист-вимога зафіксовано, сформовано офіційну відповідь про відсутність кредиту та недоступність кабінету.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step2" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_2_title">Крок 2: Подача заяви про злочин (Оболонське управління поліції / ст. 190 КК)</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_2_desc">Подати заяву до Оболонського УП ГУНП у м. Києві про оформлення кредиту шахраями на ваше ім'я.</p>
+                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_2_title">Крок 2: Відправка відповіді на office@bizpozyka.com</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_2_desc">Надіслати підготовлене заперечення на офіційну електронну пошту кредитора.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step3" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_3_title">Крок 3: Направлення претензії в ТОВ "БІЗНЕС ПОЗИКА"</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_3_desc">Вимога надати копію договору, виписки перерахування коштів та заява про відсутність підпису.</p>
+                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_3_title">Крок 3: Подача заяви про злочин (Оболонське управління поліції)</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_3_desc">Подати заяву за ст. 190 КК України до Оболонського УП ГУНП у м. Києві.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
                         <input type="checkbox" id="step4" onchange="saveSteps()" class="mt-1">
                         <div>
-                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_4_title">Крок 4: Звернення до НБУ</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_4_desc">Скарга регулятору на порушення фінансової організації та перевірку факту видачі коштів.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3 p-3 bg-slate-900/50 rounded-lg border border-slate-700">
-                        <input type="checkbox" id="step5" onchange="saveSteps()" class="mt-1">
-                        <div>
-                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_5_title">Крок 5: Перевірка Оболонського районного суду та Реєстру боржників</div>
-                            <p class="text-xs text-slate-400" data-i18n="step_5_desc">Моніторинг виконавчих проваджень, судових позовів та наказів Оболонського суду м. Києва.</p>
+                            <div class="font-semibold text-sm text-slate-200" data-i18n="step_4_title">Крок 4: Звернення до НБУ та Держспоживслужби</div>
+                            <p class="text-xs text-slate-400" data-i18n="step_4_desc">Скарга на неправомірні дії фінансової установи та незаконне стягнення.</p>
                         </div>
                     </div>
                 </div>
@@ -176,20 +169,20 @@
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
                     <h3 class="text-lg font-bold text-red-400 border-b border-slate-700 pb-2" data-i18n="creditor_data_title">Дані організації та держорганів м. Київ</h3>
                     <div>
-                        <label class="text-xs text-slate-400" data-i18n="label_creditor_name">Фінансова організація</label>
-                        <input type="text" value="ТОВ 'БІЗНЕС ПОЗИКА' (ЄДРПОУ 41084239)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
+                        <label class="text-xs text-slate-400">Кредитор / Email для відповідей</label>
+                        <input type="text" value="ТОВ 'БІЗНЕС ПОЗИКА' | office@bizpozyka.com" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400" data-i18n="label_police">Поліція району</label>
-                        <input type="text" value="Оболонське управління поліції ГУНП у м. Києві (вул. Героїв полку «Азов», 2А)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
+                        <label class="text-xs text-slate-400">Офіційний сайт та кабінет</label>
+                        <input type="text" value="https://my.bizpozyka.com" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400" data-i18n="label_court">Суд району</label>
-                        <input type="text" value="Оболонський районний суд міста Києва (вул. Левка Лук'яненка, 2Є)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
+                        <label class="text-xs text-slate-400">Поліція району</label>
+                        <input type="text" value="Оболонське управління поліції (вул. Героїв полку «Азов», 2А)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                     <div>
-                        <label class="text-xs text-slate-400">Реквізити договору / рахунку</label>
-                        <input type="text" value="Договір № 478061-КС-002 | ПриватБанк UA203052990000026508046200938" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
+                        <label class="text-xs text-slate-400">Суд району</label>
+                        <input type="text" value="Оболонський районний суд м. Києва (вул. Левка Лук'яненка, 2Є)" readonly class="w-full bg-slate-900/50 border border-slate-700 rounded p-2 text-sm text-slate-400">
                     </div>
                 </div>
             </div>
@@ -197,22 +190,22 @@
 
         <!-- TAB: MESSAGES / HISTORY -->
         <section id="tab-history" class="hidden space-y-6">
-            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="history_heading">Реєстр листування та доказів</h2>
+            <h2 class="text-2xl font-bold text-white mb-4" data-i18n="history_heading">Реєстр листування та відповідей</h2>
 
             <!-- Input Box -->
             <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
                 <h3 class="text-md font-semibold text-white" data-i18n="history_add_title">Додати нове повідомлення / лист від кредитора</h3>
                 <textarea id="new-message-text" rows="4" placeholder="Вставте сюди скопійований текст SMS, електронного чи паперового листа..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-blue-500"></textarea>
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <input type="text" id="new-message-sender" placeholder="Від кого (напр. SMS BizPozyka)" class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white w-full md:w-64">
+                    <input type="text" id="new-message-sender" placeholder="Від кого (напр. ТОВ Бізнес Позика)" class="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-white w-full md:w-64">
                     <button onclick="addMessage()" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-5 py-2 rounded-lg font-medium flex items-center gap-2 w-full md:w-auto justify-center">
                         <i class="fa-solid fa-plus"></i> <span data-i18n="btn_add_history">Зберегти в історію</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Messages List -->
-            <div class="space-y-4" id="messages-container">
+            <!-- Messages List with Dynamic Replies -->
+            <div class="space-y-6" id="messages-container">
                 <!-- Populated via JS -->
             </div>
         </section>
@@ -229,13 +222,13 @@
                     Скарга до НБУ
                 </button>
                 <button onclick="generateDoc('creditor')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-2 rounded-lg text-sm font-medium" data-i18n="doc_btn_creditor">
-                    Вимога до ТОВ "БІЗНЕС ПОЗИКА"
+                    Відповідь кредитору (Email)
                 </button>
             </div>
 
             <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 relative">
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-md font-bold text-blue-400" id="doc-title">Заява про вчинення кримінального правопорушення (Шахрайство)</h3>
+                    <h3 class="text-md font-bold text-blue-400" id="doc-title">Офіційна відповідь кредитору</h3>
                     <button onclick="copyDocText()" class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-3 py-1.5 rounded flex items-center gap-1.5">
                         <i class="fa-regular fa-copy"></i> <span data-i18n="btn_copy">Скопіювати текст</span>
                     </button>
@@ -251,19 +244,19 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-3">
                     <div class="text-blue-400 font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-triangle-exclamation"></i> <span data-i18n="advice_1_title">Що робити при залякуванні виконавчою службою?</span>
+                        <i class="fa-solid fa-envelope"></i> Куди відправляти відповідь на письмові вимоги?
                     </div>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-i18n="advice_1_text">
-                        Колектори надсилають повідомлення про "виконавче провадження". Насправді воно може відкриватись лише на основі реального рішення суду або виконавчого напису нотаріуса, які підлягають скасуванню у судовому порядку.
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Офіційний email для листування з ТОВ "БІЗНЕС ПОЗИКА": <b>office@bizpozyka.com</b>. Також ви можете перевіряти наявність кабінету на їхньому сайті: <b>https://my.bizpozyka.com</b>, хоча туди зайти неможливо через фейковість кредиту.
                     </p>
                 </div>
 
                 <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-3">
                     <div class="text-emerald-400 font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-shield-halved"></i> <span data-i18n="advice_2_title">Порядок дій по Оболонському району</span>
+                        <i class="fa-solid fa-shield-halved"></i> Ваша позиція захисту
                     </div>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-i18n="advice_2_text">
-                        Заяву про шахрайство слід подавати до Оболонського управління поліції (вул. Героїв полку «Азов», 2А), а скасування можливих наказів чи позовів — через Оболонський районний суд м. Києва.
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Ви чітко заявляєте: кредиту не брали, договір не підписували, кошти на рахунки чи картки не отримували, в особистий кабінет увійти не можете. Це класичні ознаки шахрайства з використанням персональних даних.
                     </p>
                 </div>
             </div>
@@ -273,7 +266,7 @@
 
     <script>
         let currentLang = 'uk';
-        let currentDocType = 'police';
+        let currentDocType = 'creditor';
 
         const i18n = {
             uk: {
@@ -294,16 +287,14 @@
                 debtor_label: "Відповідач / Боржник",
                 msg_count_label: "Зафіксовано повідомлень",
                 plan_title: "План дій юридичного захисту",
-                step_1_title: "Крок 1: Фіксація фактів шахрайства",
-                step_1_desc: "Всі дані кредиту, реквізити та тексти повідомлень зафіксовано у базі додатку.",
-                step_2_title: "Крок 2: Подача заяви про злочин (Оболонське управління поліції / ст. 190 КК)",
-                step_2_desc: "Подати заяву до Оболонського УП ГУНП у м. Києві про оформлення кредиту шахраями на ваше ім'я.",
-                step_3_title: "Крок 3: Направлення претензії в ТОВ 'БІЗНЕС ПОЗИКА'",
-                step_3_desc: "Вимога надати копію договору, виписки перерахування коштів та заява про відсутність підпису.",
+                step_1_title: "Крок 1: Фіксація фактів та підготовка відповіді",
+                step_1_desc: "Лист-вимога зафіксовано, сформовано офіційну відповідь про відсутність кредиту.",
+                step_2_title: "Крок 2: Відправка відповіді на office@bizpozyka.com",
+                step_2_desc: "Надіслати підготовлене заперечення на офіційну електронну пошту кредитора.",
+                step_3_title: "Крок 3: Подача заяви про злочин (Оболонське УП)",
+                step_3_desc: "Подати заяву за ст. 190 КК України до Оболонського управління поліції м. Києва.",
                 step_4_title: "Крок 4: Звернення до НБУ",
-                step_4_desc: "Скарга регулятору на порушення фінансової організації та перевірку факту видачі коштів.",
-                step_5_title: "Крок 5: Перевірка Оболонського районного суду та Реєстру боржників",
-                step_5_desc: "Моніторинг виконавчих проваджень, судових позовів та наказів Оболонського суду м. Києва.",
+                step_4_desc: "Скарга регулятору на порушення фінансової організації.",
                 profile_heading: "Вхідні дані справи та державні органи",
                 user_data_title: "Мої персональні дані",
                 label_name: "ПІБ",
@@ -312,22 +303,15 @@
                 label_phone: "Телефон",
                 btn_save: "Зберегти зміни",
                 creditor_data_title: "Дані організації та держорганів м. Київ",
-                label_creditor_name: "Фінансова організація",
-                label_police: "Поліція району",
-                label_court: "Суд району",
-                history_heading: "Реєстр листування та доказів",
+                history_heading: "Реєстр листування та відповідей",
                 history_add_title: "Додати нове повідомлення / лист від кредитора",
                 btn_add_history: "Зберегти в історію",
                 generator_heading: "Генератор офіційних документів",
                 doc_btn_police: "Заява до Поліції (Оболонське УП)",
                 doc_btn_nbu: "Скарга до НБУ",
-                doc_btn_creditor: "Вимога до ТОВ 'БІЗНЕС ПОЗИКА'",
+                doc_btn_creditor: "Відповідь кредитору (Email)",
                 btn_copy: "Скопіювати текст",
-                consultant_heading: "Консультації Адвоката та Юридичний Порадник",
-                advice_1_title: "Що робити при залякуванні виконавчою службою?",
-                advice_1_text: "Колектори надсилають повідомлення про 'виконавче провадження'. Насправді воно може відкриватись лише на основі реального рішення суду або виконавчого напису нотаріуса, які підлягають скасуванню у судовому порядку.",
-                advice_2_title: "Порядок дій по Оболонському району",
-                advice_2_text: "Заяву про шахрайство слід подавати до Оболонського управління поліції (вул. Героїв полку «Азов», 2А), а скасування можливих наказів чи позовів — через Оболонський районний суд м. Києва."
+                consultant_heading: "Консультації Адвоката та Юридичний Порадник"
             },
             ru: {
                 nav_title: "АДВОКАТ",
@@ -347,16 +331,14 @@
                 debtor_label: "Ответчик / Должник",
                 msg_count_label: "Зафиксировано сообщений",
                 plan_title: "План действий юридической защиты",
-                step_1_title: "Шаг 1: Фиксация фактов мошенничества",
-                step_1_desc: "Все данные кредита, реквизиты и тексты сообщений зафиксированы в базе приложения.",
-                step_2_title: "Шаг 2: Подача заявления о преступлении (Оболонское УП / ст. 190 УК)",
-                step_2_desc: "Подать заявление в Оболонское УП ГУНП в г. Киеве об оформлении кредита мошенниками на ваше имя.",
-                step_3_title: "Шаг 3: Направление претензии в ООО 'БИЗНЕС ПОЗИКА'",
-                step_3_desc: "Требование предоставить копию договора, выписки перечисления средств и заявление об отсутствии подписи.",
+                step_1_title: "Шаг 1: Фиксация фактов и подготовка ответа",
+                step_1_desc: "Письмо-требование зафиксировано, сформирован официальный ответ.",
+                step_2_title: "Шаг 2: Отправка ответа на office@bizpozyka.com",
+                step_2_desc: "Отправить подготовленное возражение на официальный email кредитора.",
+                step_3_title: "Шаг 3: Подача заявления о преступлении (Оболонское УП)",
+                step_3_desc: "Подать заявление по ст. 190 УК Украины в Оболонское управление полиции г. Киева.",
                 step_4_title: "Шаг 4: Обращение в НБУ",
-                step_4_desc: "Жалоба регулятору на нарушения финансовой организации и проверку факта выдачи средств.",
-                step_5_title: "Шаг 5: Проверка Оболонского районного суда и Реестра должников",
-                step_5_desc: "Мониторинг исполнительных производств, судебных исков и приказов Оболонского суда г. Киева.",
+                step_4_desc: "Жалоба регулятору на нарушения финансовой организации.",
                 profile_heading: "Входные данные дела и госорганы",
                 user_data_title: "Мои персональные данные",
                 label_name: "ФИО",
@@ -365,22 +347,15 @@
                 label_phone: "Телефон",
                 btn_save: "Сохранить изменения",
                 creditor_data_title: "Данные организации и госорганов г. Киев",
-                label_creditor_name: "Финансовая организация",
-                label_police: "Полиция района",
-                label_court: "Суд района",
-                history_heading: "Реестр переписки и доказательств",
+                history_heading: "Реестр переписки и ответов",
                 history_add_title: "Добавить новое сообщение / письмо от кредитора",
                 btn_add_history: "Сохранить в историю",
                 generator_heading: "Генератор официальных документов",
                 doc_btn_police: "Заявление в Полицию (Оболонское УП)",
                 doc_btn_nbu: "Жалоба в НБУ",
-                doc_btn_creditor: "Требование к ООО 'БИЗНЕС ПОЗИКА'",
+                doc_btn_creditor: "Ответ кредитору (Email)",
                 btn_copy: "Скопировать текст",
-                consultant_heading: "Консультации Адвоката и Юридический Советник",
-                advice_1_title: "Что делать при запугивании исполнительной службой?",
-                advice_1_text: "Коллекторы присылают сообщения об 'исполнительном производстве'. На самом деле оно может открываться только на основе реального решения суда или исполнительной надписи нотариуса, которые подлежат отмене в судебном порядке.",
-                advice_2_title: "Порядок действий по Оболонскому району",
-                advice_2_text: "Заявление о мошенничестве следует подавать в Оболонское управление полиции (ул. Героев полка «Азов», 2А), а отмену возможных приказов или исков — через Оболонский районный суд г. Киева."
+                consultant_heading: "Консультации Адвоката и Юридический Советник"
             }
         };
 
@@ -394,9 +369,25 @@
             messages: [
                 {
                     id: 1,
-                    date: new Date().toLocaleDateString('uk-UA'),
-                    sender: "ТОВ 'БІЗНЕС ПОЗИКА' (SMS/Viber)",
-                    text: `Шановний(на) Бабак Геннадій Миколайович!Повідомляємо, що по Вам Відкрито виконавче провадження про стягнення заборгованості.Для врегулювання боргу в добровільному порядку пропонуємо терміново зв’язатися з нами або перевірити наявні унікальні пропозиції в особистому кабінеті.http://cutt.ly/c2K7a3e0733423523 0800211503 office@bizpozyka.comВрегулювавши борг в досудовому порядку Ви зможете уникнути таких негативних наслідків, як: постійні листи від Приватного виконавця за адресою реєстрації, внесення Вас до реєстру боржників та блокування Ваших особистих рахунків, арешту рухомого та нерухомого майна. Дані наслідки застосовуються в процесі юридичного стягнення боргу.Термін дії пропозиції - ОБМЕЖЕНИЙ в часі !\nОтримувач: ТОВ "БІЗНЕС ПОЗИКА", Код ЄДРПОУ 41084239, Рахунок: Приват Банк UA20 305299 00000 26508046200938, МФО 305299. Призначення платежу: Погашення заборгованості ПІБ Бабак Геннадій Миколайович, ІПН 2615907039, Договір № 478061-КС-002`
+                    date: "11.11.2026",
+                    sender: "ТОВ 'БІЗНЕС ПОЗИКА' (office@bizpozyka.com)",
+                    text: `Шановний(на) Бабак Геннадій Миколайович!Повідомляємо, що по Вам Відкрито виконавче провадження про стягнення заборгованості.Для врегулювання боргу в добровільному порядку пропонуємо терміново зв’язатися з нами або перевірити наявні унікальні пропозиції в особистому кабінеті.http://cutt.ly/c2K7a3e0733423523 0800211503 office@bizpozyka.comВрегулювавши борг в досудовому порядку Ви зможете уникнути таких негативних наслідків, як: постійні листи від Приватного виконавця за адресою реєстрації, внесення Вас до реєстру боржників та блокування Ваших особистих рахунків, арешту рухомого та нерухомого майна. Дані наслідки застосовуються в процесі юридичного стягнення боргу.Термін дії пропозиції - ОБМЕЖЕНИЙ в часі !\nОтримувач: ТОВ "БІЗНЕС ПОЗИКА", Код ЄДРПОУ 41084239, Рахунок: Приват Банк UA20 305299 00000 26508046200938, МФО 305299. Призначення платежу: Погашення заборгованості ПІБ Бабак Геннадій Миколайович, ІПН 2615907039, Договір № 478061-КС-002`,
+                    reply: `ОФІЦІЙНА ВІДПОВІДЬ АДВОКАТА НА ЦЕЙ ПИСЬМОВИЙ ЗАПИТ:
+Кому: ТОВ "БІЗНЕС ПОЗИКА" (office@bizpozyka.com)
+Від: Бабак Геннадій Миколайович (ІПН: 2615907039)
+
+ЗАПЕРЕЧЕННЯ НА ВИМОГУ ТА ПОВІДОМЛЕННЯ ПРО ФЕЙКОВИЙ КРЕДИТ
+
+У відповідь на ваше повідомлення щодо Договору № 478061-КС-002 офіційно заявляю наступне:
+1. Я, Бабак Геннадій Миколайович, ніколи не укладав жодних кредитивних чи позикових договорів із ТОВ "БІЗНЕС ПОЗИКА" та не підписував жодних документів (ні паперово, ні через ЕЦП/OTP).
+2. Зайти в особистий кабінет за вашими посиланнями я не можу, оскільки жодних акаунтів не створював.
+3. НОЛЬ КОШТІВ за Договором № 478061-КС-002 ніколи не надходило на жодну з моїх банківських карток чи рахунків.
+
+Вважаю наявність цього запису наслідком шахрайських дій третіх осіб з незаконним використанням моїх персональних даних. 
+ВИМАГАЮ негайно припинити будь-які вимоги, скасувати незаконну заборгованість та надати повний пакет документів по договору для передачі до Оболонського управління поліції м. Києва за ст. 190 КК України.
+
+Дата: 11.11.2026
+Підпис: Бабак Геннадій Миколайович`
                 }
             ]
         };
@@ -420,7 +411,6 @@
             document.getElementById('dash-msg-count').innerText = appData.messages.length;
         }
 
-        // Reliable Tab Switching
         function switchTab(tabId) {
             ['dashboard', 'profile', 'history', 'generator', 'consultant'].forEach(t => {
                 const section = document.getElementById('tab-' + t);
@@ -464,13 +454,24 @@
             
             appData.messages.forEach(msg => {
                 const card = document.createElement('div');
-                card.className = "bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-3";
+                card.className = "bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-4";
                 card.innerHTML = `
                     <div class="flex justify-between items-center text-xs text-slate-400 border-b border-slate-700 pb-2">
-                        <span class="font-bold text-blue-400">${msg.sender}</span>
+                        <span class="font-bold text-blue-400"><i class="fa-solid fa-envelope-open"></i> ${msg.sender}</span>
                         <span>${msg.date}</span>
                     </div>
-                    <p class="text-sm text-slate-200 leading-relaxed font-mono whitespace-pre-wrap">${msg.text}</p>
+                    <div>
+                        <div class="text-xs text-slate-400 mb-1 font-semibold">Вхідне повідомлення:</div>
+                        <p class="text-sm text-slate-200 leading-relaxed font-mono whitespace-pre-wrap bg-slate-900/50 p-3 rounded border border-slate-700/50">${msg.text}</p>
+                    </div>
+                    ${msg.reply ? `
+                    <div class="mt-4 pt-3 border-t border-slate-700">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold text-emerald-400"><i class="fa-solid fa-reply"></i> Відповідь на цей лист (надіслати на office@bizpozyka.com):</span>
+                            <button onclick="copyReplyText('${encodeURIComponent(msg.reply)}')" class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-2.5 py-1 rounded">Скопіювати відповідь</button>
+                        </div>
+                        <pre class="bg-slate-950 p-3 rounded text-emerald-300 font-mono text-xs leading-relaxed border border-emerald-500/20">${msg.reply}</pre>
+                    </div>` : ''}
                 `;
                 container.appendChild(card);
             });
@@ -479,24 +480,42 @@
 
         function addMessage() {
             const text = document.getElementById('new-message-text').value.trim();
-            const sender = document.getElementById('new-message-sender').value.trim() || (currentLang === 'uk' ? 'Кредитор / Колектори' : 'Кредитор / Коллекторы');
+            const sender = document.getElementById('new-message-sender').value.trim() || 'ТОВ "БІЗНЕС ПОЗИКА" (office@bizpozyka.com)';
             
             if (!text) {
                 alert(currentLang === 'uk' ? 'Будь ласка, введіть текст повідомлення' : 'Пожалуйста, введите текст сообщения');
                 return;
             }
 
+            const defaultReply = `ОФІЦІЙНА ВІДПОВІДЬ АДВОКАТА НА ЦЕЙ ПИСЬМОВИЙ ЗАПИТ:
+Кому: ТОВ "БІЗНЕС ПОЗИКА" (office@bizpozyka.com)
+Від: Бабак Геннадій Миколайович (ІПН: 2615907039)
+
+ЗАПЕРЕЧЕННЯ НА ВИМОГУ ТА ПОВІДОМЛЕННЯ ПРО ФЕЙКОВИЙ КРЕДИТ
+
+Я, Бабак Геннадій Миколайович, заявляю, що жодних договорів з вами не укладав, в особистий кабінет зайти не можу, кошти на рахунки не отримував. Кредит є шахрайським. Вимагаю закрити справу та надати повну документацію для передачі в Оболонську поліцію м. Києва.
+
+Дата: ${new Date().toLocaleDateString('uk-UA')}
+Підпис: Бабак Геннадій Миколайович`;
+
             appData.messages.unshift({
                 id: Date.now(),
                 date: new Date().toLocaleDateString('uk-UA'),
                 sender: sender,
-                text: text
+                text: text,
+                reply: defaultReply
             });
 
             document.getElementById('new-message-text').value = '';
             document.getElementById('new-message-sender').value = '';
             saveData();
             renderMessages();
+        }
+
+        function copyReplyText(encodedText) {
+            const text = decodeURIComponent(encodedText);
+            navigator.clipboard.writeText(text);
+            alert(currentLang === 'uk' ? 'Текст відповіді успішно скопійовано!' : 'Текст ответа успешно скопирован!');
         }
 
         function saveUserData() {
@@ -515,94 +534,61 @@
             const u = appData.user;
 
             if (type === 'police') {
-                title.innerText = currentLang === 'uk' ? "Заява до Оболонського управління поліції (ст. 190 КК України)" : "Заявление в Оболонское управление полиции (ст. 190 УК Украины)";
+                title.innerText = "Заява до Оболонського управління поліції (ст. 190 КК)";
                 content.innerText = 
 `Начальнику Оболонського управління поліції ГУНП у м. Києві
 Адреса: вул. Героїв полку «Азов», 2А, м. Київ, 04210
-Заявник: ${u.name}
-Адреса: ${u.address}
-Тел: ${u.phone}
-ІПН: ${u.inn}
+Заявник: ${u.name}, ІПН: ${u.inn}
+Адреса: ${u.address}, Тел: ${u.phone}
 
-ЗАЯВА
-про вчинення кримінального правопорушення (ст. 190 КК України - Шахрайство)
+ЗАЯВА про вчинення кримінального правопорушення (Шахрайство)
 
-Я, ${u.name}, офіційно повідомляю про вчинення кримінального правопорушення щодо мене.
-Останнім часом на мій мобільний телефон почали надходити вимоги від ТОВ "БІЗНЕС ПОЗИКА" (ЄДРПОУ 41084239) про сплату заборгованості за Договором № 478061-КС-002.
-
-Офіційно заявляю та наголошую:
-1. Я ніколи не укладав жодних кредитних договорів з ТОВ "БІЗНЕС ПОЗИКА".
-2. Я не надавав згоди на обробку та використання моїх персональних даних цій організації.
-3. Я не отримував жодних коштів від ТОВ "БІЗНЕС ПОЗИКА" на свої банківські рахунки чи картки.
-
-Вважаю, що невстановлені особи шляхом шахрайства (обману та зловживання довірою), використавши мої персональні дані, незаконно оформили на моє ім'я фіктивний кредит (Договір № 478061-КС-002).
-
-Керуючись ст. 55, 60, 214 КПК України, ст. 190 КК України, -
-
-ПРОШУ:
-1. Прийняти цю заяву про вчинення кримінального правопорушення та невідкладно внести відомості до Єдиного реєстру досудових розслідувань (ЄРДР).
-2. Надати мені витяг з ЄРДР та документ про прийняття заяви.
-3. Провести повне та неупереджене розслідування фактів шахрайства.
+Я, ${u.name}, повідомляю про шахрайське оформлення кредиту на моє ім'я ТОВ "БІЗНЕС ПОЗИКА" за Договором № 478061-КС-002.
+Я жодних договорів не укладав, в особистий кабінет зайти не можу, кошти на свої рахунки не отримував. 
+Прошу внести дані до ЄРДР та розслідувати факт шахрайства.
 
 Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
             }
 
             if (type === 'nbu') {
-                title.innerText = currentLang === 'uk' ? "Скарга до Національного банку України (НБУ)" : "Жалоба в Национального банк Украины (НБУ)";
+                title.innerText = "Скарга до Національного банку України";
                 content.innerText = 
-`До Національного банку України
-вул. Інститутська, 9, м. Київ, 01008
-Заявник: ${u.name}
-Адреса: ${u.address}
-Тел: ${u.phone}
+`До Національного банку України (вул. Інститутська, 9, м. Київ)
+Заявник: ${u.name}, ІПН: ${u.inn}, тел: ${u.phone}
 
-СКАРГА
-щодо неправомірних дій ТОВ "БІЗНЕС ПОЗИКА" (ЄДРПОУ 41084239)
+СКАРГА на неправомірні дії ТОВ "БІЗНЕС ПОЗИКА" (ЄДРПОУ 41084239)
 
-ТОВ "БІЗНЕС ПОЗИКА" вимагає від мене погашення заборгованості за Договором № 478061-КС-002.
-Заявляю, що даний кредит я не оформлював, коштів не отримував та жодних електронних чи інших підписів не ставив. Фінансова організація здійснює неправомірні атаки та залякування.
-
-ПРОШУ:
-1. Провести перевірку діяльності ТОВ "БІЗНЕС ПОЗИКА" щодо законності укладення договору № 478061-КС-002.
-2. Витребувати докази реального перерахування коштів та ідентифікації клієнта.
-3. Зобов'язати кредитора припинити незаконні вимоги.
+Компанія вимагає неіснуючий борг за Договором № 478061-КС-002. Кредит не оформлювався, кошти не отримувались. 
+Прошу провести перевірку та зобов'язати кредитора припинити тиск.
 
 Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
             }
 
             if (type === 'creditor') {
-                title.innerText = currentLang === 'uk' ? "Заперечення-Вимога до ТОВ 'БІЗНЕС ПОЗИКА'" : "Возражение-Требование к ООО 'БИЗНЕС ПОЗИКА'";
+                title.innerText = "Офіційна відповідь на email: office@bizpozyka.com";
                 content.innerText = 
-`Директору ТОВ "БІЗНЕС ПОЗИКА"
-Код ЄДРПОУ: 41084239
-office@bizpozyka.com
+`Кому: office@bizpozyka.com
+Від: ${u.name} (ІПН: ${u.inn})
+Адреса: ${u.address} | Тел: ${u.phone}
 
-Від: ${u.name}
-Адреса: ${u.address}
-Тел: ${u.phone}
+ЗАПЕРЕЧЕННЯ НА ВИМОГУ ТА ПОВІДОМЛЕННЯ ПРО ФЕЙКОВИЙ КРЕДИТ
 
-ЗАПЕРЕЧЕННЯ ТА ВИМОГА
-щодо нібито заборгованості за Договором № 478061-КС-002
+У відповідь на ваші вимоги щодо Договору № 478061-КС-002 офіційно заявляю:
+1. Я, ${u.name}, не укладав жодних кредитних договорів з ТОВ "БІЗНЕС ПОЗИКА".
+2. В особистий кабінет (https://my.bizpozyka.com) увійти не маю можливості, оскільки акаунт не створював.
+3. НОЛЬ КОШТІВ за цим договором на мої банківські рахунки чи картки не надходило.
 
-У відповідь на ваші сповіщення повідомляю, що я, ${u.name}, не укладав Договір № 478061-КС-002 та не отримував від вашої компанії жодних коштів.
+Вважаю цей кредит оформленим шахрайським шляхом. Вимагаю негайно закрити борг, припинити стягнення та надати повну документацію для передачі до Оболонської поліції м. Києва.
 
-На підставі законодавства України -
-
-ВИМАГАЮ:
-1. Надати належним чином завірену копію Договору № 478061-КС-002 та докази його підписання (з фіксацією ЕЦП/OTP).
-2. Надати банківську виписку або платіжне доручення, що підтверджує перерахування коштів на мій особистий банківський рахунок.
-3. Негайно припинити будь-які вимоги та виключити мої дані з баз боржників.
-
-У разі ігнорування цієї вимоги матеріали будуть передані до Оболонського управління поліції за ст. 190 КК України.
-
-Дата: ${new Date().toLocaleDateString('uk-UA')}                           Підпис: ____________ / ${u.name}`;
+Дата: ${new Date().toLocaleDateString('uk-UA')}
+Підпис: ____________ / ${u.name}`;
             }
         }
 
         function copyDocText() {
             const text = document.getElementById('doc-content').innerText;
             navigator.clipboard.writeText(text);
-            alert(currentLang === 'uk' ? 'Текст документа успішно скопійовано у буфер обміну!' : 'Текст документа успешно скопирован в буфер обмена!');
+            alert(currentLang === 'uk' ? 'Текст документа успішно скопійовано!' : 'Текст документа успешно скопирован!');
         }
     </script>
 </body>
